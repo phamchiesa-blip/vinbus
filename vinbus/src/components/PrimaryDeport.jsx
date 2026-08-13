@@ -11,7 +11,7 @@ const PrimaryDeport = () => {
                 <div key={depot.name} className="flex flex-col">
                     <img src={depot.image} alt="" className="w-full object-cover rounded-t-2xl" />
                     <div className='bg-[#F6FAFF] rounded-b-2xl hover:bg-amber-50 transition duration-300'>
-                        <h1 className="flex gap-5 px-5 py-5 font-semibold text-2xl text-green-500"> <EvCharger /> {depot.name}</h1>
+                        <h1 className="flex gap-5 px-5 py-5 font-semibold text-2xl text-green-500"> <EvCharger className='mt-1'/> {depot.name}</h1>
                         <h1 className="px-5 flex gap-5 text-green-500"><MapPin /> {depot.address}</h1>
                         <a href={depot.ggmap} className="px-5 flex gap-5 py-5 text-gray-400 hover:text-red-500"><LocateFixed /> Xem trên bản đồ</a>
                     </div>

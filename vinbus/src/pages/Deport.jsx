@@ -1,8 +1,9 @@
 import DeportBackground from "../components/DeportBackground"
-import {Mail, PhoneCall} from 'lucide-react'
+import {Mail, PhoneCall, CircleArrowDown} from 'lucide-react'
 import { CountUp } from 'use-count-up'
 import { useEffect, useRef, useState } from "react"
 import PrimaryDeport from "../components/PrimaryDeport"
+import DepotTimeline from "../components/DepotTimeline"
 
 const Deport = () => {
   const count = useRef(null);
@@ -90,7 +91,7 @@ const Deport = () => {
     </div>
 
     {/* Text */}
-    <div className="text-white mt-5">
+    <div className="text-white mt-5 mb-2">
       <p className="text-base font-medium">Call Center</p>
       <p className="mt-1 text-base font-normal">1900 866 663</p>
     </div>
@@ -98,7 +99,15 @@ const Deport = () => {
     </div>
   </div>
 
+  <DepotTimeline />
+
   <PrimaryDeport />
+
+  <div className="mt-[100px] text-center">
+    <h1 className="text-5xl font-semibold text-green-700">Từ Depot tới hành trình của bạn</h1>
+    <span className="text-center flex items-center justify-center mt-5"><CircleArrowDown className="animate-bounce text-red-700"/></span>
+    <a href="/buses" className="font-medium text-xl text-green-500 mb-[100px] cursor-pointer underline">Khám phá các tuyến xe tại đây</a>
+  </div>
   </>
   )
 }

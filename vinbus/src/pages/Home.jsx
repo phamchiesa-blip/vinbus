@@ -14,8 +14,8 @@ const Home = () => {
       >
         <div className="container mx-auto min-h-screen">
           <SearchItem />
-          <h1 className="text-center font-bold text-2xl mt-20 flex justify-center items-center cursor-pointer active:scale-95 underline
-          bg-gradient-to-r from-yellow-500 via-pink-300 to-green-700 bg-clip-text text-transparent">Khám phá các tuyến VinBus</h1>
+          <a href="/buses" className="text-center font-bold text-2xl mt-20 flex justify-center items-center cursor-pointer active:scale-95 underline
+          bg-gradient-to-r from-yellow-500 via-pink-300 to-green-700 bg-clip-text text-transparent">Khám phá các tuyến VinBus</a>
         </div>
       </section>
 
