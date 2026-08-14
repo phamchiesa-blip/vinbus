@@ -1,4 +1,18 @@
-const BusHero = () => {
+
+
+const BusHero = ({ searchQuery, onSearchQueryChange, onSearch }) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSearch();
+
+    requestAnimationFrame(() => {
+      document.getElementById("bus-routes")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
   return (
     <section className="relative overflow-hidden bg-slate-950 px-6 py-16 md:px-12 md:py-20">
       
@@ -24,7 +38,7 @@ const BusHero = () => {
         </p>
 
         {/* Search */}
-        <div className="mx-auto mt-10 max-w-2xl">
+        <form onSubmit={handleSubmit} className="mx-auto mt-10 max-w-2xl">
           <div className="flex items-center rounded-2xl border border-white/10 bg-white/10 p-2 shadow-2xl backdrop-blur-xl">
             
             <div className="flex flex-1 items-center gap-3 px-4">
@@ -44,12 +58,14 @@ const BusHero = () => {
 
               <input
                 type="text"
+                value={searchQuery}
+                onChange={(event) => onSearchQueryChange(event.target.value)}
                 placeholder="Tìm tuyến xe, điểm đi hoặc điểm đến..."
                 className="w-full bg-transparent py-3 text-sm text-white outline-none placeholder:text-slate-500 md:text-base"
               />
             </div>
 
-            <button className="rounded-xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300">
+            <button type="submit" className="rounded-xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300">
               Tìm kiếm
             </button>
           </div>
@@ -57,7 +73,7 @@ const BusHero = () => {
           <p className="mt-3 text-xs text-slate-500">
             Ví dụ: E01, Mỹ Đình, Ocean Park...
           </p>
-        </div>
+        </form>
       </div>
     </section>
   );

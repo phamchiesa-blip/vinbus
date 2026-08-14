@@ -1,3 +1,10 @@
+export const navbar = [
+  {id: 0, name: "Trang Chủ", link: "/"},
+  {id: 1, name: "Xe Bus", link: "/buses"},
+  {id: 2, name: "Điểm Đến", link: "/destination"},
+  {id: 3, name: "Depots", link: "/deport"},
+];
+
 export const stats = [
   {
     value: 20,
@@ -30,9 +37,9 @@ export const stats = [
 
 
 export const popularBus = [
-  {number: "E01", route: "BX Mỹ Đình - KĐT Ocean Park", rate: "4.9", reviews: '124', type: "EB10"},
-  {number: "E02", route: "Hào Nam - KĐT Ocean Park ", rate: "4.7", reviews: '99', type: "EB10"},
-  {number: "E03", route: "Hàm Nghi - KĐT Ocean Park", rate: "4.8", reviews: '106', type: "EB10"},
+  {number: "E01", route: "BX Mỹ Đình - KĐT Ocean Park", rate: "4.9", reviews: '124', type: "EB10", destination: "BX Mỹ Đình - Cung Thiếu Nhi cs Phạm Hùng - Landmark 72 - HUS/USSH - Royal City - Ngã Tư Sở - Bảo tàng PKKQ - Chợ Mơ - Times City - Aeon Long Biên - KĐT Ocean Park"},
+  {number: "E02", route: "Hào Nam - KĐT Ocean Park ", rate: "4.7", reviews: '99', type: "EB10", destination: "Ga Cát Linh - BX Kim Mã - Bờ Hồ - Cung Thiếu Nhi - Long Biên - BX Gia Lâm - KĐT Việt Hưng - Vinhomes RiverSide - Trụ sở Tập đoàn Vingroup - HV Nông Nghiệp - KĐT Ocean Park"},
+  {number: "E03", route: "Hàm Nghi - KĐT Ocean Park", rate: "4.8", reviews: '106', type: "EB10", destination: "Vinhomes Hàm Nghi - KĐT Mỹ Đình - BX Mỹ Đình - Landmark 72 - ĐH Lao Động - Rạp phim QG - HV Ngân Hàng - HUST - Chợ Mơ - Times City - Aeon Long Biên - KĐT Ocean Park"},
   {number: "E04", route: "KĐT Smart City - Vincom Long Biên ", rate: "4.7", reviews: '124', type: "EB10"},
   {number: "E05", route: "KĐT Smart City - Long Biên", rate: "4.7", reviews: '124', type: "EB10"},
   {number: "E06", route: "KĐT Smart City - BX Giáp Bát ", rate: "4.7", reviews: '124', type: "EB10"},
@@ -50,12 +57,6 @@ export const popularBus = [
   {number: "21B", route: "Duyên Thái - BX Mỹ Đình", rate: "4.7", reviews: '124', type: "EB8"},
   {number: "37", route: "BX Giáp Bát - TT Chúc Sơn", rate: "4.7", reviews: '124', type: "EB8"},
   {number: "125", route: "BX Giáp Bát - Vân Đình", rate: "4.7", reviews: '124', type: "EB6"},
-];
-
-export const remarkableDestination = [
-  {number: "E01", destination: "BX Mỹ Đình - Landmark 72 - HUS/USSH - Royal City - Ngã Tư Sở - Bảo tàng PKKQ - Chợ Mơ - Times City - Aeon Long Biên - KĐT Ocean Park"},
-  {number: "E02", destination: "Ga Cát Linh - BX Kim Mã - Bờ Hồ - Cung Thiếu Nhi - Long Biên - BX Gia Lâm - KĐT Việt Hưng - Vinhomes RiverSide - Trụ sở Tập đoàn Vingroup - HV Nông Nghiệp - KĐT Ocean Park"},
-  {number: "E03", destination: "Vinhomes Hàm Nghi - KĐT Mỹ Đình - BX Mỹ Đình - Landmark 72 - ĐH Lao Động - Rạp phim QG - HV Ngân Hàng - HUST - Chợ Mơ - Times City - Aeon Long Biên - KĐT Ocean Park"},
 ];
 
 export const features = [

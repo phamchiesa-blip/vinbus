@@ -1,14 +1,10 @@
-// import RouteInfo from "./RouteInfo";
-// import RouteStops from "./RouteStops";
-// import DepartureTimes from "./DepartureTimes";
-// import Reviews from "./Reviews";
 import RouteTabs from '../components/RouteTabs'
 
 const RouteDetail = ({ route, onBack }) => {
   if (!route) return null;
 
   return (
-    <section className="container mx-auto mt-8 overflow-hidder border border-slate-200 bg-white shadow-sm">
+    <section className="container mx-auto mt-8 overflow-hidden border border-slate-200 bg-white shadow-sm">
 
       {/* Header */}
       <div className="relative overflow-hidden px-6 py-8 md:px-10 md:py-10 mt-10">
@@ -46,21 +42,21 @@ const RouteDetail = ({ route, onBack }) => {
 
             <div>
               <div className="flex items-center gap-3">
-                <span className="rounded-xl bg-emerald-400 px-3 py-1.5 text-sm font-bold text-slate-950">
+                <span className="rounded-xl bg-emerald-400 px-3 py-1.5 text-sm font-bold text-slate-700">
                   {route.id}
                 </span>
 
-                <span className="text-sm font-medium text-emerald-300">
+                <span className="text-sm font-medium text-slate-500">
                   {route.operator}
                 </span>
               </div>
 
-              <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-green-500 md:text-5xl">
+              <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
                 {route.name}
               </h1>
 
               {/* Start → End */}
-              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-300">
+              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-500">
                 <span>{route.outbound.start}</span>
 
                 <svg
@@ -86,7 +82,7 @@ const RouteDetail = ({ route, onBack }) => {
               <div className="flex items-center gap-2">
                 <span className="text-xl text-yellow-400">★</span>
 
-                <span className="text-lg font-bold text-green-500">
+                <span className="text-lg font-bold text-slate-900">
                   {route.rating ?? "—"}
                 </span>
               </div>
@@ -101,17 +97,9 @@ const RouteDetail = ({ route, onBack }) => {
       </div>
 
       {/* Content placeholder */}
-      <div className="p-6 md:p-10">
-        <div className="rounded-2xl bg-slate-50 p-8 text-center">
-          <p className="text-sm text-slate-400">
-           {/* <RouteInfo route={route} />
-           <RouteStops route={route} />
-           <DepartureTimes route={route} />
-           <Reviews route={route} /> */}
+     
            <RouteTabs route={route} />
-          </p>
-        </div>
-      </div>
+        
 
     </section>
   );

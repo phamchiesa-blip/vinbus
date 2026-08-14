@@ -5,13 +5,26 @@ import {useState} from 'react'
 
 const BusRoute = () => {
   const [selectedRoute, setSelectedRoute] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = () => {
+    setSelectedRoute(null);
+  };
 
   return (
     <div className="mb-[100px]">
-        <BusHero />
+        <BusHero
+          searchQuery={searchQuery}
+          onSearchQueryChange={setSearchQuery}
+          onSearch={handleSearch}
+        />
         
         {!selectedRoute ? (
-        <BusRoutes onSelectRoute={setSelectedRoute} />
+        <BusRoutes
+          searchQuery={searchQuery}
+          onSelectRoute={setSelectedRoute}
+          onClearSearch={() => setSearchQuery("")}
+        />
         ) : (
         <RouteDetail
           route={selectedRoute}

@@ -4,10 +4,42 @@ import { CountUp } from 'use-count-up'
 import { useEffect, useRef, useState } from "react"
 import PrimaryDeport from "../components/PrimaryDeport"
 import DepotTimeline from "../components/DepotTimeline"
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Deport = () => {
   const count = useRef(null);
+  const sectionRef = useRef(null);
+  const busImageRef = useRef(null);
+  
   const [startCount, setStartCount] = useState(false);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        busImageRef.current,
+        {
+          scale: 0.3,
+          opacity: 0,
+        },
+        {
+    scale: 1,
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top 80%",
+      end: "top 20%",
+      scrub: 1,
+    },
+        }
+      );
+    },
+    { scope: sectionRef }
+  );
 
   useEffect(() => {
     const element = count.current;
@@ -103,10 +135,14 @@ const Deport = () => {
 
   <PrimaryDeport />
 
-  <div className="mt-[100px] text-center">
+  <div ref={sectionRef} className="mt-[100px] text-center mb-[100px] bus-section">
     <h1 className="text-5xl font-semibold text-green-700">Từ Depot tới hành trình của bạn</h1>
+    <div className="text-center flex justify-center mt-10 cursor-pointer">
+      <img ref={busImageRef} src="/bus.png" alt="" className="vinbus"/>
+    </div>
     <span className="text-center flex items-center justify-center mt-5"><CircleArrowDown className="animate-bounce text-red-700"/></span>
-    <a href="/buses" className="font-medium text-xl text-green-500 mb-[100px] cursor-pointer underline">Khám phá các tuyến xe tại đây</a>
+    <a href="/buses" className="font-medium text-xl text-green-500 cursor-pointer underline">Khám phá các tuyến xe tại đây</a>
+
   </div>
   </>
   )

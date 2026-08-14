@@ -1,5 +1,6 @@
 import { Show, SignInButton, UserButton } from '@clerk/react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import {navbar} from '../index'
 
 const NavBar = () => {
   return (
@@ -31,18 +32,15 @@ border border-white/10
 shadow-2xl px-5 py-2.5
 rounded-2xl" id="navbar-sticky">
       <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-400 rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
-        <li>
-          <Link to="/" class="block py-2 px-3 text-heading bg-brand rounded-sm md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Trang Chủ</Link>
-        </li>
-        <li>
-          <a href="/buses" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Xe Bus</a>
-        </li>
-        <li>
-          <a href="/destination" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Điểm Đến</a>
-        </li>
-        <li>
-          <Link to="/deport" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Deport</Link>
-        </li>
+          {navbar.map((nav) => (
+            <li key={nav.id}>
+              <NavLink to={nav.link} end={nav.link === "/"}
+              className={({ isActive }) => `block py-2 px-3 text-heading bg-brand rounded-sm md:bg-transparent md:text-fg-brand md:p-0 ${isActive ? "underline underline-offset-4 decoration-2" : ""}`}
+              >
+                  {nav.name}
+              </NavLink>
+            </li>
+          ))}
       </ul>
     </div>
   </div>
