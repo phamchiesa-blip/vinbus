@@ -168,7 +168,7 @@ const DepartureTimes = ({ route }) => {
         <span>
           Tần suất trung bình:{" "}
           <strong className="font-semibold text-slate-600">
-            {route.frequency} phút
+            {route.frequency} 
           </strong>
         </span>
       </div>

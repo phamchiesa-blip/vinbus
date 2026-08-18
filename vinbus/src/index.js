@@ -81,10 +81,25 @@ export const features = [
 ];
 
 export const depots = [
-  {name: "Depot Ocean Park", image: "/depot_OCP.jpg", address: "Vinhomes Ocean Park, Gia Lâm, Hà Nội", ggmap: "https://maps.app.goo.gl/7yZVM5qMKcggtYuRA"},
-  {name: "Depot Smart City", image: "/SMC.jpg", address: "Vinhomes Smart City, Tây Mỗ, Hà Nội", ggmap: "https://maps.app.goo.gl/Bf4kYTjsY5KYPpT29"},
-  {name: "Depot Cổ Loa", image: "/Coloa.jpg", address: "Vinhomes Cổ Loa, Đông Anh, Hà Nội", ggmap: "https://maps.app.goo.gl/HNxm1v3gAWtPvbN39"},
-  {name: "Depot Bus Liên Ninh", image: "/tucha.jpg", address: "Thôn Yên Phú, Ngọc Hồi, Hà Nội", ggmap: "https://maps.app.goo.gl/5D7tSLBhwQdEnvYV7"}
+  {name: "Depot Ocean Park", 
+    image: "/depot_OCP.jpg", 
+    address: "Vinhomes Ocean Park, Gia Lâm, Hà Nội", 
+    ggmap: "https://maps.app.goo.gl/7yZVM5qMKcggtYuRA",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.050286309261!2d105.95454637601495!3d20.99062128064916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135af0053e67113%3A0xeb01e9d7fe0a63ad!2sVinbus%20Depot%20Ocean%20Park!5e0!3m2!1svi!2s!4v1787063473026!5m2!1svi!2s"},
+  {name: "Depot Smart City", 
+    image: "/SMC.jpg", address: "Vinhomes Smart City, Tây Mỗ, Hà Nội", 
+    ggmap: "https://maps.app.goo.gl/Bf4kYTjsY5KYPpT29",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2160.293125371749!2d105.75038129486082!3d21.006507183886082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453bf2f2e3253%3A0xd109c94a3454450a!2sVinbus%20Depot%20Smart%20City!5e0!3m2!1svi!2s!4v1787063374210!5m2!1svi!2s"},
+  {name: "Depot Cổ Loa", 
+    image: "/Coloa.jpg", 
+    address: "Vinhomes Cổ Loa, Đông Anh, Hà Nội", 
+    ggmap: "https://maps.app.goo.gl/HNxm1v3gAWtPvbN39",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4365.858094079363!2d105.85540627605403!3d21.09141862404888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab003eb35a8b%3A0xac30b7917c30c15!2sDepot%20Xanh%20SM%20C%E1%BB%95%20Loa!5e0!3m2!1svi!2s!4v1787063628216!5m2!1svi!2s"},
+  {name: "Depot Bus Liên Ninh", 
+    image: "/tucha.jpg", 
+    address: "Thôn Yên Phú, Ngọc Hồi, Hà Nội", 
+    ggmap: "https://maps.app.goo.gl/5D7tSLBhwQdEnvYV7",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1863.5407125703098!2d105.85192419272516!3d20.90904349440639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135b3f0c98495f3%3A0x7471e8b98a849743!2sC%C3%B4ng%20ty%20CPVT%20%26%20DV%20Li%C3%AAn%20Ninh!5e0!3m2!1svi!2s!4v1787063724820!5m2!1svi!2s"}
 ];
 
 export const destinations = [
@@ -96,7 +111,7 @@ export const destinations = [
     description:
       "Một trong những không gian xanh và điểm ngắm hoàng hôn nổi tiếng của Hà Nội.",
     image: "/WestLake.jpg",
-    busRoutes: ["E09"],
+    busRoutes: ["E09", "E11"],
     googleMapsUrl: "https://maps.app.goo.gl/outv1RGeVz8euX71A",
   },
   {
@@ -151,7 +166,7 @@ export const destinations = [
     description:
       "Tổ hợp mua sắm, ẩm thực và giải trí hiện đại bên Hồ Tây.",
     image: "/Lotte.png",
-    busRoutes: ["E09"],
+    busRoutes: ["E09", "E11"],
     googleMapsUrl: "https://maps.app.goo.gl/jvupBt2nzUAzp8FU9",
   },
 ];
