@@ -3454,7 +3454,7 @@ export const VinBusRoute = [
   distance: 17,
   operatingTime: "05:00 - 22:05",
   travelTime: "60 phút",
-  frequency: "10 - 15",
+  frequency: 10,
   tripsPerDay: null,
 
     // Lộ trình
@@ -3997,7 +3997,7 @@ export const VinBusRoute = [
   distance: 20,
   operatingTime: "05:00 - 21:35",
   travelTime: "60 phút",
-  frequency: "15 - 20 phút",
+  frequency: 15,
   tripsPerDay: null,
 
     // Lộ trình
@@ -4238,7 +4238,7 @@ export const VinBusRoute = [
   distance: 14,
   operatingTime: "05:00 - 21:30",
   travelTime: "42 phút",
-  frequency: "16 phút",
+  frequency: 16,
   tripsPerDay: null,
 
     // Lộ trình
@@ -4465,7 +4465,7 @@ export const VinBusRoute = [
   distance: 27,
   operatingTime: "05:00 - 21:35",
   travelTime: "75 phút",
-  frequency: "11 - 12 - 15 phút",
+  frequency: 12,
   tripsPerDay: null,
 
     // Lộ trình
@@ -4789,7 +4789,7 @@ export const VinBusRoute = [
   distance: 16,
   operatingTime: "05:00 - 21:35",
   travelTime: "50 phút",
-  frequency: "10 - 15 phút",
+  frequency: 10,
   tripsPerDay: null,
 
     // Lộ trình
@@ -5092,7 +5092,7 @@ export const VinBusRoute = [
   distance: 25,
   operatingTime: "05:00 - 21:00",
   travelTime: "75 phút",
-  frequency: "15 - 20 phút",
+  frequency: 15,
   tripsPerDay: null,
 
     // Lộ trình
@@ -5365,7 +5365,7 @@ export const VinBusRoute = [
   distance: 23,
   operatingTime: "05:00 - 21:30",
   travelTime: "68 phút",
-  frequency: "10 - 15 phút",
+  frequency: 15,
   tripsPerDay: null,
 
     // Lộ trình
@@ -5659,7 +5659,7 @@ export const VinBusRoute = [
   distance: 44,
   operatingTime: "04:50 - 20:30",
   travelTime: "121 phút",
-  frequency: "20 - 25 phút",
+  frequency: 20,
   tripsPerDay: null,
 
     // Lộ trình

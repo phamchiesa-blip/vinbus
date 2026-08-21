@@ -48,7 +48,7 @@ const busRouteSchema = new mongoose.Schema(
     },
 
     frequency: {
-      type: String,
+      type: Number,
       default: 0,
     },
 

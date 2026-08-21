@@ -1,4 +1,5 @@
 import BusRoute from "../models/BusRoute.js";
+import ApiFeatures from "../utils/apiFeatures.js";
 
 // next(error) cho nó vào lỗi tiếp theo, nơi mà middleware xử lý
 
@@ -21,6 +22,9 @@ export const getRoutes = async (req, res, next) => {
   try {
     const { search, from, to } = req.query; // tìm search, from, to trong URL (sau dấu ?)
 
+    // =====================
+      // FILTER
+    // =====================
     const filter = {};
 
     // $options: "i" cho phép không phân biệt chữ hoa/chữ thường.
@@ -67,12 +71,33 @@ export const getRoutes = async (req, res, next) => {
       });
     }
 
-    const routes = await BusRoute.find(filter);
+    // Tổng số tuyến sau khi filter
+    const totalRoutes = await BusRoute.countDocuments(filter);
+    
+    const features = new ApiFeatures(
+    BusRoute.find(filter),
+    req.query
+    )
+    .sort()
+    .paginate();
+   
+    const totalPages = Math.ceil(totalRoutes / features.limit); // làm tròn lên
 
-  res.status(200).json({
-  success: true,
-  data: routes,
-  });
+    features.paginate(totalPages);
+
+    const routes = await features.query;
+  
+    res.status(200).json({
+      success: true,
+      pagination: {
+                page: features.page,
+                limit: features.limit,
+                totalRoutes,
+                totalPages,
+              },
+      data: routes,
+    });
+
   } catch (error) {
     next(error);
   }
