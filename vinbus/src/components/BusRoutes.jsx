@@ -9,44 +9,56 @@ const BusRoutes = ({ searchQuery, onSelectRoute, onClearSearch }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchRoutes = async () => {
-      try {
-        setLoading(true);
+  const fetchRoutes = async () => {
+    try {
+      setLoading(true);
+      setError(null);
 
-        const response = await getRoutes();
+      const response = await getRoutes(searchQuery);
 
-        setRoutes(response);
-      } catch (err) {
-        console.error(err);
-        setError("Không thể tải danh sách tuyến xe.");
-      } finally {
-        setLoading(false);
-      }
-    };
+      setRoutes(response);
+    } catch (err) {
+      console.error(err);
+      setError("Không thể tải danh sách tuyến xe.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchRoutes();
-  }, []);
+  fetchRoutes();
+}, [searchQuery]);
 
   const normalizedQuery = searchQuery.trim().toLowerCase();
-  const filteredRoutes =  routes.filter((route) => {
-    if (!normalizedQuery) return true;
 
-    const matchesRouteInfo = [
-      route.id,
-      route.name,
-      route.outbound.start,
-      route.outbound.end,
-    ].some((value) => value.toLowerCase().includes(normalizedQuery));
+const filteredRoutes = routes.filter((route) => {
+  if (!normalizedQuery) return true;
 
-    const matchesStops = [route.outbound?.stops, route.inbound?.stops].some(
-      (stops) =>
-        Array.isArray(stops) &&
-        stops.some((stop) =>
-        stop.name.toLowerCase().includes(normalizedQuery))
+  const matchesRouteInfo = [
+    route._id,
+    route.id,
+    route.routeNumber,
+    route.name,
+    route.outbound?.start,
+    route.outbound?.end,
+    route.inbound?.start,
+    route.inbound?.end,
+  ]
+    .filter(Boolean)
+    .some((value) =>
+      String(value).toLowerCase().includes(normalizedQuery)
     );
 
-    return matchesRouteInfo || matchesStops;
-  });
+  const matchesStops = [
+    ...(route.outbound?.stops || []),
+    ...(route.inbound?.stops || []),
+  ].some((stop) =>
+    String(stop?.name || "")
+      .toLowerCase()
+      .includes(normalizedQuery)
+  );
+
+  return matchesRouteInfo || matchesStops;
+});
   
   return loading ? 
   <Loading /> 

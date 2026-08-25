@@ -1,14 +1,21 @@
 import BusHero from "../components/BusHero"
 import BusRoutes from "../components/BusRoutes"
 import RouteDetail from "../components/RouteDetail"
-import {useState} from 'react'
+import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 const BusRoute = () => {
+ const [searchParams] = useSearchParams();
+
+  const initialSearch = searchParams.get("search") || "";
+
   const [selectedRoute, setSelectedRoute] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
+  const [submittedSearch, setSubmittedSearch] = useState(initialSearch);
 
   const handleSearch = () => {
     setSelectedRoute(null);
+    setSubmittedSearch(searchQuery);
   };
 
   return (
@@ -21,9 +28,12 @@ const BusRoute = () => {
         
         {!selectedRoute ? (
         <BusRoutes
-          searchQuery={searchQuery}
-          onSelectRoute={setSelectedRoute}
-          onClearSearch={() => setSearchQuery("")}
+            searchQuery={submittedSearch}
+  onSelectRoute={setSelectedRoute}
+  onClearSearch={() => {
+    setSearchQuery("");
+    setSubmittedSearch("");
+  }}
         />
         ) : (
         <RouteDetail

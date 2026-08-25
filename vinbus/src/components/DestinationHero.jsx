@@ -64,62 +64,26 @@ function DestinationHero() {
             trải nghiệm đang chờ bạn khám phá.
           </motion.p>
 
-          {/* Search */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.45,
-            }}
-            className="mt-9 flex max-w-xl items-center rounded-2xl border border-white/20 bg-white/10 p-2 backdrop-blur-md"
-          >
-            <div className="flex h-12 w-12 items-center justify-center text-white/70">
-              <svg
-                width="21"
-                height="21"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.3-4.3" />
-              </svg>
-            </div>
+          <a
+  href="#popular-destination"
+  className="group mt-9 inline-flex items-center gap-3 text-white"
+>
+  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md">
+    <CircleArrowDown className="h-5 w-5 animate-bounce" />
+  </span>
 
-            <input
-              type="text"
-              placeholder="Bạn muốn đi đâu?"
-              className="flex-1 bg-transparent px-2 text-sm text-white outline-none placeholder:text-white/50 md:text-base"
-            />
+  <span>
+    <span className="block text-sm font-semibold">
+      Khám phá điểm đến
+    </span>
 
-            <button className="rounded-xl bg-green-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-green-400">
-              Tìm kiếm
-            </button>
-          </motion.div>
+    <span className="block text-xs text-white/50">
+      Xem các địa điểm nổi bật
+    </span>
+  </span>
+</a>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
-      >
-        <div className="flex flex-col items-center gap-3 text-white/60">
-          <span className="text-[10px] uppercase tracking-[0.3em]">
-            Explore
-          </span>
-
-          <a href="#category">
-            <CircleArrowDown className="animate-bounce"/>
-            </a>
-        </div>
-      </motion.div>
     </section>
   );
 }

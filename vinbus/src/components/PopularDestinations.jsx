@@ -12,7 +12,7 @@ function PopularDestinations({ selectedCategory }) {
         );
 
   return (
-    <section className="bg-neutral-950 px-6 pb-24 text-white md:px-12 lg:px-20">
+    <section id="popular-destination" className="bg-neutral-950 px-6 pb-24 text-white md:px-12 lg:px-20">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">

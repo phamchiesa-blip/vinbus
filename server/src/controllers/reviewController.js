@@ -3,91 +3,97 @@ import BusRoute from '../models/BusRoute.js'
 
 // Tạo review
 export const createReview = async (req, res, next) => {
-    try {
-        const {routeId} = req.params;
-        const {rating, comment, images} = req.body;
+  try {
+    const { routeId } = req.params;
+    const { rating, comment } = req.body;
 
-        const userId = req.user.id;
-       
+    const userId = req.user.id;
 
-        // KT tuyến có tồn tại ko
-        const route = await BusRoute.findById(routeId);
-        if(!route) {
-            return res.status(404).json({
-                success: false,
-                message: "Đéo thấy tuyến này !!!"
-            });
-        }
+    // Kiểm tra tuyến
+    const route = await BusRoute.findById(routeId);
 
-        // Tạo Review
-        const review = await Review.create({
-            route: routeId,
-            userId,
-            rating,
-            comment,
-            images
-        });
-
-        res.status(201).json({
-            success: true,
-            data: review,
-        });
-
-    } catch (error) {
-        next(error);
+    if (!route) {
+      return res.status(404).json({
+        success: false,
+        message: "Đéo thấy tuyến này !!!",
+      });
     }
-}
+
+    // Lấy URL ảnh từ Cloudinary
+    const images = req.files
+      ? req.files.map((file) => file.path)
+      : [];
+
+    // Tạo review
+    const review = await Review.create({
+      route: routeId,
+      userId,
+      rating,
+      comment,
+      images,
+    });
+
+    res.status(201).json({
+      success: true,
+      data: review,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 
 // Lấy hết review của 1 tuyến nào đó theo id
 export const getReviewsByRoute = async (req, res, next) => {
-    try {
-        const { routeId } = req.params;
+  try {
+    const { routeId } = req.params;
 
-        // Kiểm tra tuyến xe có tồn tại không
-        const route = await BusRoute.findById(routeId);
+    const route = await BusRoute.findById(routeId);
 
-        if (!route) {
-            return res.status(404).json({
-                success: false,
-                message: "Đéo thấy tuyến này !!!",
-            });
-        }
-
-        // Lấy tất cả review của tuyến xe này
-        const reviews = await Review.find({
-            route: routeId,
-        });
-
-        const totalReviews = reviews.length;
-
-         const totalRating = reviews.reduce(
-            (sum, review) => sum + review.rating,
-            0
-        );
-
-        const averageRating =
-            totalReviews > 0
-                ? Number(
-                      (totalRating / totalReviews).toFixed(1)
-                  )
-                : 0;
-
-        // Tạm thời
-        const reviewsWithUser = reviews;
-       
-
-        res.status(200).json({
-            success: true,
-            summary: {
-                averageRating,
-                totalReviews,
-            },
-            data: reviewsWithUser,
-        });
-
-    } catch (error) {
-        next(error);
+    if (!route) {
+      return res.status(404).json({
+        success: false,
+        message: "Đéo thấy tuyến này !!!",
+      });
     }
+
+    const reviews = await Review.find({
+      route: routeId,
+    })
+      .populate("userId", "name avatar")
+      .sort({ createdAt: -1 });
+
+    const totalReviews = reviews.length;
+
+    const totalRating = reviews.reduce(
+      (sum, review) => sum + review.rating,
+      0
+    );
+
+    const averageRating =
+      totalReviews > 0
+        ? Number((totalRating / totalReviews).toFixed(1))
+        : 0;
+
+    const reviewsWithUser = reviews.map((review) => {
+      const reviewData = review.toObject();
+
+      return {
+        ...reviewData,
+        user: reviewData.userId,
+      };
+    });
+
+    res.status(200).json({
+      success: true,
+      summary: {
+        averageRating,
+        totalReviews,
+      },
+      data: reviewsWithUser,
+    });
+  } catch (error) {
+    next(error);
+  }
 };
 
 // User xóa review

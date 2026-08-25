@@ -62,11 +62,11 @@ const NavBar = () => {
         </div>
       )}
 
-      <span className="hidden font-medium text-heading sm:block">
+      <span className="hidden font-medium text-heading sm:block bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-0.5">
         {firstName}
       </span>
 
-      <svg
+      {/* <svg
         className={`h-4 w-4 transition-transform ${
           isProfileOpen ? "rotate-180" : ""
         }`}
@@ -80,7 +80,7 @@ const NavBar = () => {
           strokeWidth="2"
           d="m19 9-7 7-7-7"
         />
-      </svg>
+      </svg> */}
     </button>
 
     {isProfileOpen && (

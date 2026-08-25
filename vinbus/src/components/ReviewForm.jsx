@@ -14,86 +14,113 @@ const ReviewForm = ({ route, onClose, onSuccess }) => {
   const [error, setError] = useState("");
 
   const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
+  const files = Array.from(e.target.files);
 
-    // Tối đa 5 ảnh
-    const selectedFiles = files.slice(0, 5);
+  if (!files.length) return;
 
-    setImages(selectedFiles);
+  const invalidFile = files.find(
+    (file) => file.size > 5 * 1024 * 1024
+  );
+
+  if (invalidFile) {
+    setError("Mỗi ảnh không được vượt quá 5MB.");
+    return;
+  }
+
+  setError("");
+
+  setImages((prev) => {
+    const remainingSlots = 5 - prev.length;
+
+    const newFiles = files.slice(0, remainingSlots);
+
+    return [...prev, ...newFiles];
+  });
+
+  e.target.value = "";
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    setError("");
+  setError("");
 
-    if (rating === 0) {
-      setError("Vui lòng chọn số sao đánh giá.");
-      return;
-    }
+  if (rating === 0) {
+    setError("Vui lòng chọn số sao đánh giá.");
+    return;
+  }
 
-    if (!comment.trim()) {
-      setError("Vui lòng chia sẻ trải nghiệm của bạn.");
-      return;
-    }
+  if (!comment.trim()) {
+    setError("Vui lòng chia sẻ trải nghiệm của bạn.");
+    return;
+  }
 
-    if (!isAuthenticated) {
-      setError("Vui lòng đăng nhập để gửi đánh giá.");
-      return;
-    }
+  if (!isAuthenticated) {
+    setError("Vui lòng đăng nhập để gửi đánh giá.");
+    return;
+  }
 
-    try {
-  setLoading(true);
+  try {
+    setLoading(true);
 
-  const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token");
+
     if (!token) {
       setError("Không tìm thấy token. Vui lòng đăng nhập lại.");
       return;
     }
 
-  const response = await fetch(
-    `${API_URL}/api/reviews/${route._id}/reviews`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        rating,
-        comment: comment.trim(),
-      }),
-    }
-  );
+    // Tạo FormData
+    const formData = new FormData();
 
-  const result = await response.json();
+    formData.append("rating", rating);
+    formData.append("comment", comment.trim());
 
-  if (!response.ok) {
-    throw new Error(
-      result.message || "Không thể gửi đánh giá."
+    // Thêm các ảnh
+    images.forEach((image) => {
+      formData.append("images", image);
+    });
+
+    const response = await fetch(
+      `${API_URL}/api/reviews/${route._id}/reviews`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      }
     );
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        result.message || "Không thể gửi đánh giá."
+      );
+    }
+
+    // Reset form
+    setRating(0);
+    setHoverRating(0);
+    setComment("");
+    setImages([]);
+
+    if (onSuccess) {
+      await onSuccess();
+    }
+
+    onClose();
+
+  } catch (error) {
+    console.error("Lỗi gửi review:", error);
+
+    setError(
+      error.message || "Có lỗi xảy ra khi gửi đánh giá."
+    );
+  } finally {
+    setLoading(false);
   }
-
-  setRating(0);
-  setHoverRating(0);
-  setComment("");
-  setImages([]);
-
-  if (onSuccess) {
-    await onSuccess();
-  }
-
-  onClose();
-
-} catch (error) {
-  console.error("Lỗi gửi review:", error);
-
-  setError(
-    error.message || "Có lỗi xảy ra khi gửi đánh giá."
-  );
-} finally {
-  setLoading(false);
-}
   };
 
   return (
@@ -278,8 +305,8 @@ const ReviewForm = ({ route, onClose, onSuccess }) => {
 
           {/* Thông báo tạm thời */}
           {images.length > 0 && (
-            <p className="mt-2 text-xs text-amber-500">
-              Ảnh hiện chỉ được xem trước, chưa được tải lên.
+            <p className="mt-2 text-xs text-slate-400">
+              {images.length}/5 ảnh đã chọn
             </p>
           )}
         </div>

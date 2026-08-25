@@ -4,10 +4,11 @@ import { createReview,
         deleteReview,
         updateReview } from '../controllers/reviewController.js'
 import authMiddleware from '../middleware/authMiddleware.js'
+import uploadReviewImages from "../middleware/reviewUploadMiddleware.js";
 
 const reviewRouter = express.Router();
 
-reviewRouter.post("/:routeId/reviews", authMiddleware, createReview);
+reviewRouter.post("/:routeId/reviews", authMiddleware, uploadReviewImages.array("images", 5), createReview);
 reviewRouter.get("/:routeId/reviews", getReviewsByRoute);
 reviewRouter.delete("/:routeId/reviews/:reviewId", authMiddleware, deleteReview);
 reviewRouter.put("/:routeId/reviews/:reviewId", authMiddleware, updateReview);

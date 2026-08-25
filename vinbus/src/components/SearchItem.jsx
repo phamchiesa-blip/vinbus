@@ -1,9 +1,27 @@
 import {Search} from 'lucide-react'
 import { CountUp } from 'use-count-up'
 import {stats} from '../index';
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SearchItem = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    const query = searchQuery.trim();
+
+    if (!query) return;
+
+    navigate(`/buses?search=${encodeURIComponent(query)}`);
+  };
+
+  const handleExampleSearch = (item) => {
+    setSearchQuery(item);
+
+    navigate(`/buses?search=${encodeURIComponent(item)}`);
+  };
   return (
         <>
         {/* Title */}
@@ -38,11 +56,19 @@ export const SearchItem = () => {
   
           <input
           type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={(e) => {
+          if (e.key === "Enter") {
+             handleSearch();
+          }
+          }}
           placeholder="Nhập số tuyến, tên tuyến hoặc điểm đến..."
           className="flex-1 bg-transparent text-sm text-gray-700 outline-none placeholder:text-gray-400"
           />
   
-          <button className="rounded-lg bg-emerald-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-emerald-700">
+          <button onClick={handleSearch} 
+          className="rounded-lg bg-emerald-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-emerald-700">
             Tìm kiếm →
           </button>
           </div>
@@ -53,16 +79,23 @@ export const SearchItem = () => {
       Ví dụ:
     </span>
   
-    {["E01", "E02", "08A", "21A", "BX Mỹ Đình", "KĐT Smart City", "Aeon Mall Hà Đông"].map(
-      (item) => (
-        <button
-          key={item}
-          className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-600 transition hover:bg-emerald-100"
-        >
-          {item}
-        </button>
-      )
-    )}
+    {[
+  "E01",
+  "E02",
+  "08A",
+  "21A",
+  "BX Mỹ Đình",
+  "KĐT Smart City",
+  "Aeon Mall Hà Đông",
+  ].map((item) => (
+  <button
+    key={item}
+    onClick={() => handleExampleSearch(item)}
+    className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-600 transition hover:bg-emerald-100"
+  >
+    {item}
+  </button>
+  ))}
   </div>
         </div>
 
