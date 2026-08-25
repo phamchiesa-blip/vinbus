@@ -6,11 +6,11 @@ const Footer = () => {
 
 <footer class="bg-neutral-primary-soft bg-gray-200">
     <div class=" w-full">
-        <div class="md:flex md:justify-between px-50 pt-10">
+        <div class="md:flex md:justify-between px-5 md:px-50 pt-10">
           <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
                   <img src="vinbus_logo.jpg" class="h-10 me-3" alt="FlowBite Logo" />
-                  <span class="bg-gradient-to-r from-green-800 to-pink-700 bg-clip-text text-transparent self-center text-3xl font-semibold whitespace-nowrap">VinBus</span>
+                  <span class="bg-linear-to-r from-green-800 to-pink-700 bg-clip-text text-transparent self-center text-3xl font-semibold whitespace-nowrap">VinBus</span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

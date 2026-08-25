@@ -69,7 +69,7 @@ const PopularBus = () => {
                       <MapPin className="w-3.5 h-3.5 text-emerald-600" />
                       <span>Điểm đến nổi bật:</span>
                     </div>
-                    <span className="text-[11px] text-slate-400 font-semibold">{stops.length} trạm</span>
+                    <span className="text-[11px] text-slate-400 font-semibold">{stops.length} điểm</span>
                   </div>
                   
                   {/* Container hiển thị toàn bộ trạm với thanh cuộn mỏng */}

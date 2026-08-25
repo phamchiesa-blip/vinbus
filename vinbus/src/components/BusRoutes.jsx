@@ -1,9 +1,34 @@
 import BusRouteCard from "./BusRouteCard";
-import {VinBusRoute} from '../index'
+import {getRoutes} from '../services/routeService'
+import { useState, useEffect } from "react";
+import Loading from '../components/Loading'
 
 const BusRoutes = ({ searchQuery, onSelectRoute, onClearSearch }) => {
+  const [routes, setRoutes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchRoutes = async () => {
+      try {
+        setLoading(true);
+
+        const response = await getRoutes();
+
+        setRoutes(response);
+      } catch (err) {
+        console.error(err);
+        setError("Không thể tải danh sách tuyến xe.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRoutes();
+  }, []);
+
   const normalizedQuery = searchQuery.trim().toLowerCase();
-  const filteredRoutes = VinBusRoute.filter((route) => {
+  const filteredRoutes =  routes.filter((route) => {
     if (!normalizedQuery) return true;
 
     const matchesRouteInfo = [
@@ -16,13 +41,17 @@ const BusRoutes = ({ searchQuery, onSelectRoute, onClearSearch }) => {
     const matchesStops = [route.outbound?.stops, route.inbound?.stops].some(
       (stops) =>
         Array.isArray(stops) &&
-        stops.some((stop) => stop.toLowerCase().includes(normalizedQuery))
+        stops.some((stop) =>
+        stop.name.toLowerCase().includes(normalizedQuery))
     );
 
     return matchesRouteInfo || matchesStops;
   });
   
-  return (
+  return loading ? 
+  <Loading /> 
+  : 
+  (
     <section id="bus-routes" className="mt-16 container mx-auto">
       {/* Heading */}
       <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end mt-[100px]">
@@ -41,16 +70,23 @@ const BusRoutes = ({ searchQuery, onSelectRoute, onClearSearch }) => {
         </div>
 
         <span className="text-sm font-medium text-slate-400">
-          {filteredRoutes.length} / {VinBusRoute.length} tuyến
+          {filteredRoutes.length} / {routes.length} tuyến
         </span>
       </div>
 
       {/* Cards */}
-      {filteredRoutes.length > 0 ? (
+      {error ? (
+        <div className="flex min-h-[260px] items-center justify-center">
+          <p className="text-red-500">
+            {error}
+          </p>
+        </div>
+      ) : 
+        filteredRoutes.length > 0 ? (
       <div className="grid gap-5 md:grid-cols-2">
         {filteredRoutes.map((route) => (
           <BusRouteCard
-            key={route.id}
+            key={route._id}
             route={route}
             onClick={() => onSelectRoute(route)}
           />

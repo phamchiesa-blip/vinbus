@@ -8,7 +8,9 @@ const RouteStops = ({ route }) => {
       ? route.outbound
       : route.inbound;
 
-  const stops = currentRoute.stops;
+  const stops = [...(currentRoute?.stops || [])].sort(
+    (a, b) => a.order - b.order
+  );
 
   return (
     <section className="p-6 md:p-10">
@@ -24,8 +26,8 @@ const RouteStops = ({ route }) => {
           </h2>
 
           <p className="mt-2 text-sm text-slate-500">
-            {stops.length} điểm dừng · {currentRoute.start} →{" "}
-            {currentRoute.end}
+            {stops.length} điểm dừng 🚍 {currentRoute?.start} →{" "}
+            {currentRoute?.end}
           </p>
         </div>
 
@@ -78,7 +80,7 @@ const RouteStops = ({ route }) => {
             </p>
 
             <p className="truncate font-semibold text-slate-800">
-              {currentRoute.start}
+              {currentRoute?.start}
             </p>
           </div>
         </div>
@@ -94,7 +96,7 @@ const RouteStops = ({ route }) => {
             </p>
 
             <p className="truncate font-semibold text-slate-800">
-              {currentRoute.end}
+              {currentRoute?.end}
             </p>
           </div>
 
@@ -119,76 +121,82 @@ const RouteStops = ({ route }) => {
       {/* Stops */}
       <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
         <div className="max-h-[520px] overflow-y-auto p-5 md:p-7">
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute bottom-5 left-[11px] top-5 w-px bg-slate-200" />
+          {stops.length === 0 ? (
+            <p className="py-10 text-center text-sm text-slate-400">
+              Chưa có thông tin điểm dừng.
+            </p>
+          ) : (
+            <div className="relative">
+              {/* Vertical line */}
+              <div className="absolute bottom-5 left-[11px] top-5 w-px bg-slate-200" />
 
-            <div className="space-y-0">
-              {stops.map((stop, index) => {
-                const isFirst = index === 0;
-                const isLast = index === stops.length - 1;
+              <div className="space-y-0">
+                {stops.map((stop, index) => {
+                  const isFirst = index === 0;
+                  const isLast = index === stops.length - 1;
 
-                return (
-                  <div
-                    key={`${direction}-${index}`}
-                    className="group relative flex gap-5"
-                  >
-                    {/* Timeline point */}
-                    <div className="relative z-10 flex w-6 shrink-0 justify-center">
-                      <div
-                        className={`mt-1.5 rounded-full border-4 border-white transition-all ${
-                          isFirst
-                            ? "h-4 w-4 bg-emerald-500 ring-4 ring-emerald-100"
-                            : isLast
-                              ? "h-4 w-4 bg-slate-900 ring-4 ring-slate-100"
-                              : "h-3 w-3 bg-slate-300 group-hover:bg-emerald-400"
-                        }`}
-                      />
-                    </div>
-
-                    {/* Stop content */}
+                  return (
                     <div
-                      className={`min-w-0 flex-1 ${
-                        isLast ? "pb-2" : "pb-6"
-                      }`}
+                      key={`${direction}-${stop.order}`}
+                      className="group relative flex gap-5"
                     >
+                      {/* Timeline point */}
+                      <div className="relative z-10 flex w-6 shrink-0 justify-center">
+                        <div
+                          className={`mt-1.5 rounded-full border-4 border-white transition-all ${
+                            isFirst
+                              ? "h-4 w-4 bg-emerald-500 ring-4 ring-emerald-100"
+                              : isLast
+                                ? "h-4 w-4 bg-slate-900 ring-4 ring-slate-100"
+                                : "h-3 w-3 bg-slate-300 group-hover:bg-emerald-400"
+                          }`}
+                        />
+                      </div>
+
+                      {/* Stop content */}
                       <div
-                        className={`rounded-xl px-4 py-3 transition-colors ${
-                          isFirst
-                            ? "bg-emerald-50"
-                            : isLast
-                              ? "bg-slate-100"
-                              : "hover:bg-slate-50"
+                        className={`min-w-0 flex-1 ${
+                          isLast ? "pb-2" : "pb-6"
                         }`}
                       >
-                        <p
-                          className={`text-sm leading-6 ${
-                            isFirst || isLast
-                              ? "font-semibold text-slate-900"
-                              : "text-slate-600"
+                        <div
+                          className={`rounded-xl px-4 py-3 transition-colors ${
+                            isFirst
+                              ? "bg-emerald-50"
+                              : isLast
+                                ? "bg-slate-100"
+                                : "hover:bg-slate-50"
                           }`}
                         >
-                          {stop}
-                        </p>
+                          <p
+                            className={`text-sm leading-6 ${
+                              isFirst || isLast
+                                ? "font-semibold text-slate-900"
+                                : "text-slate-600"
+                            }`}
+                          >
+                            {stop.name}
+                          </p>
 
-                        {isFirst && (
-                          <span className="mt-1 block text-xs font-medium text-emerald-600">
-                            Điểm xuất phát
-                          </span>
-                        )}
+                          {isFirst && (
+                            <span className="mt-1 block text-xs font-medium text-emerald-600">
+                              Điểm xuất phát
+                            </span>
+                          )}
 
-                        {isLast && (
-                          <span className="mt-1 block text-xs font-medium text-slate-500">
-                            Điểm kết thúc
-                          </span>
-                        )}
+                          {isLast && (
+                            <span className="mt-1 block text-xs font-medium text-slate-500">
+                              Điểm kết thúc
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

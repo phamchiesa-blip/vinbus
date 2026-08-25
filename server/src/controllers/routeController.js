@@ -79,7 +79,7 @@ export const getRoutes = async (req, res, next) => {
     req.query
     )
     .sort()
-    .paginate();
+    .setPagination();
    
     const totalPages = Math.ceil(totalRoutes / features.limit); // làm tròn lên
 

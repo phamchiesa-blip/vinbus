@@ -1,25 +1,18 @@
 import Review from "../models/Review.js";
 import BusRoute from '../models/BusRoute.js'
-import { getAuth } from "@clerk/express";
-import { clerkClient } from "@clerk/express";
 
 // Tạo review
 export const createReview = async (req, res, next) => {
     try {
         const {routeId} = req.params;
-        const {rating, comment} = req.body;
+        const {rating, comment, images} = req.body;
 
-        const { userId } = getAuth(req);
-        if (!userId) {
-            return res.status(401).json({
-                success: false,
-                message: "Unauthorized",
-            });
-        }
+        const userId = req.user.id;
+       
 
         // KT tuyến có tồn tại ko
         const route = await BusRoute.findById(routeId);
-        if(!routeId) {
+        if(!route) {
             return res.status(404).json({
                 success: false,
                 message: "Đéo thấy tuyến này !!!"
@@ -31,7 +24,8 @@ export const createReview = async (req, res, next) => {
             route: routeId,
             userId,
             rating,
-            comment
+            comment,
+            images
         });
 
         res.status(201).json({
@@ -78,24 +72,9 @@ export const getReviewsByRoute = async (req, res, next) => {
                   )
                 : 0;
 
-        // Lấy thông tin user 
-        const reviewsWithUser = await Promise.all(
-    reviews.map(async (review) => {
-        const user = await clerkClient.users.getUser(
-            review.userId
-        );
-
-        return {
-            ...review.toObject(),
-
-            user: {
-                id: user.id,
-                name: `${user.firstName || ""} ${user.lastName || ""}`.trim(),
-                avatar: user.imageUrl,
-            },
-        };
-    })
-    );
+        // Tạm thời
+        const reviewsWithUser = reviews;
+       
 
         res.status(200).json({
             success: true,
@@ -115,9 +94,8 @@ export const getReviewsByRoute = async (req, res, next) => {
 export const deleteReview = async (req, res, next) => {
     try {
         const { reviewId } = req.params;
-
-        const { userId } = getAuth(req);
-
+        const userId = req.user.id;
+       
         const review = await Review.findById(reviewId);
 
         if (!review) {
@@ -128,10 +106,10 @@ export const deleteReview = async (req, res, next) => {
         }
 
         // Kiểm tra review có phải của user hiện tại không
-        if (review.userId !== userId) {
+        if (review.userId.toString() !== userId.toString()) {
             return res.status(403).json({
                 success: false,
-                message: "Mày chỉ được xóa cmt của mày thôi chó ngu ạ!",
+                message: "Mày chỉ được xóa review của mày thôi.",
             });
         }
 
@@ -151,8 +129,7 @@ export const deleteReview = async (req, res, next) => {
 export const updateReview = async (req, res, next) => {
     try {
         const { reviewId } = req.params;
-        const { userId } = getAuth(req);
-
+        const userId = req.user.id;
         const { rating, comment } = req.body;
 
         const review = await Review.findById(reviewId);

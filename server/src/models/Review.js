@@ -11,6 +11,7 @@ const reviewSchema = new mongoose.Schema(
         userId: {
             type: String,
             required: true,
+            trim: true,
         },
 
         rating: {
@@ -24,6 +25,11 @@ const reviewSchema = new mongoose.Schema(
             type: String,
             required: true,
             trim: true, // sẽ tự bỏ khoảng trắng thừa ở đầu và cuối.
+            maxlength: 500,
+        },
+        images: {
+            type: [String],
+            default: [],
         },
     },
     {

@@ -1,33 +1,43 @@
 const RouteInfo = ({ route }) => {
+  const operatingHours = route.operatingHours
+    ? `${route.operatingHours.start} - ${route.operatingHours.end}`
+    : "Đang cập nhật";
+
   const infoItems = [
     {
       label: "Giá vé",
-      value: route.ticketPrice,
+      value: route.ticketPrice || "Đang cập nhật",
       icon: "₫",
     },
     {
       label: "Độ dài tuyến",
-      value: `${route.distance} km`,
+      value: `${route.distance ?? 0} km`,
       icon: "↔",
     },
     {
       label: "Thời gian chạy",
-      value: route.travelTime,
+      value: route.travelTime || "Đang cập nhật",
       icon: "◷",
     },
     {
       label: "Thời gian hoạt động",
-      value: route.operatingTime,
+      value: operatingHours,
       icon: "◴",
     },
     {
       label: "Giãn cách tuyến",
-      value: `${route.frequency} phút`,
+      value:
+        route.frequency > 0
+          ? `${route.frequency} phút`
+          : "Đang cập nhật",
       icon: "↻",
     },
     {
       label: "Số chuyến / ngày",
-      value: route.tripsPerDay,
+      value:
+        route.tripsPerDay > 0
+          ? route.tripsPerDay
+          : "Đang cập nhật",
       icon: "▣",
     },
   ];
@@ -53,7 +63,7 @@ const RouteInfo = ({ route }) => {
             className="group rounded-2xl border border-slate-100 bg-green-200 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-100 hover:bg-green-400"
           >
             {/* Icon */}
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl mx-auto bg-white text-lg font-semibold text-emerald-500 shadow-sm">
+            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg font-semibold text-emerald-500 shadow-sm">
               {item.icon}
             </div>
 
@@ -78,7 +88,7 @@ const RouteInfo = ({ route }) => {
           </p>
 
           <p className="mt-1 font-semibold text-slate-800">
-            {route.operator}
+            {route.operator || "VinBus"}
           </p>
         </div>
 

@@ -5,8 +5,8 @@ const DepartureTimes = ({ route }) => {
 
   const times =
     direction === "outbound"
-      ? route.departureTimes.outbound
-      : route.departureTimes.inbound;
+      ? route.departureTimes?.outbound || []
+      : route.departureTimes?.inbound || [];
 
   // Chia giờ thành các khung trong ngày
   const groupedTimes = useMemo(() => {
@@ -35,7 +35,7 @@ const DepartureTimes = ({ route }) => {
   }, [times]);
 
   return (
-    <section className=" p-6 md:p-10">
+    <section className="p-6 md:p-10">
       {/* Header */}
       <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
         <div>
@@ -48,7 +48,7 @@ const DepartureTimes = ({ route }) => {
           </h2>
 
           <p className="mt-2 text-sm text-slate-500">
-            Lịch khởi hành của tuyến {route.id}
+            Lịch khởi hành của tuyến {route.routeNumber}
           </p>
         </div>
 
@@ -117,42 +117,50 @@ const DepartureTimes = ({ route }) => {
 
       {/* Schedule */}
       <div className="mt-6 max-h-[520px] overflow-y-auto rounded-2xl border border-slate-200 p-5 md:p-7">
-        <div className="space-y-8">
-          {Object.entries(groupedTimes).map(
-            ([period, periodTimes]) => {
-              if (periodTimes.length === 0) return null;
+        {times.length === 0 ? (
+          <div className="py-10 text-center">
+            <p className="text-sm text-slate-400">
+              Chưa có thông tin giờ xuất bến.
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-8">
+            {Object.entries(groupedTimes).map(
+              ([period, periodTimes]) => {
+                if (periodTimes.length === 0) return null;
 
-              return (
-                <div key={period}>
-                  {/* Period heading */}
-                  <div className="mb-4 flex items-center gap-3">
-                    <h3 className="text-sm font-bold text-slate-800">
-                      {period}
-                    </h3>
+                return (
+                  <div key={period}>
+                    {/* Period heading */}
+                    <div className="mb-4 flex items-center gap-3">
+                      <h3 className="text-sm font-bold text-slate-800">
+                        {period}
+                      </h3>
 
-                    <div className="h-px flex-1 bg-slate-100" />
+                      <div className="h-px flex-1 bg-slate-100" />
 
-                    <span className="text-xs text-slate-400">
-                      {periodTimes.length} chuyến
-                    </span>
+                      <span className="text-xs text-slate-400">
+                        {periodTimes.length} chuyến
+                      </span>
+                    </div>
+
+                    {/* Times */}
+                    <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+                      {periodTimes.map((time, index) => (
+                        <div
+                          key={`${time}-${index}`}
+                          className="rounded-xl border border-slate-100 bg-slate-50 px-3 py-3 text-center text-sm font-semibold text-slate-700 transition-all hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
+                        >
+                          {time}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-
-                  {/* Times */}
-                  <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
-                    {periodTimes.map((time) => (
-                      <div
-                        key={time}
-                        className="rounded-xl border border-slate-100 bg-slate-50 px-3 py-3 text-center text-sm font-semibold text-slate-700 transition-all hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
-                      >
-                        {time}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            }
-          )}
-        </div>
+                );
+              }
+            )}
+          </div>
+        )}
       </div>
 
       {/* Footer */}
@@ -168,7 +176,9 @@ const DepartureTimes = ({ route }) => {
         <span>
           Tần suất trung bình:{" "}
           <strong className="font-semibold text-slate-600">
-            {route.frequency} phút
+            {route.frequency > 0
+              ? `${route.frequency} phút`
+              : "Đang cập nhật"}
           </strong>
         </span>
       </div>

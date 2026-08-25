@@ -8,7 +8,7 @@ const BusRouteCard = ({ route, onClick }) => {
       <div className="flex items-start justify-between gap-4">
         <div>
           <span className="inline-flex rounded-lg bg-emerald-50 px-3 py-1 text-sm font-bold text-emerald-600">
-            {route.id}
+            {route.routeNumber}
           </span>
 
           <h3 className="mt-4 text-xl font-bold text-slate-900">
@@ -69,7 +69,7 @@ const BusRouteCard = ({ route, onClick }) => {
           </p>
 
           <p className="mt-1 font-semibold text-slate-800">
-            {route.travelTime}
+            {route.travelTime || "Đang cập nhật"}
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@ const BusRouteCard = ({ route, onClick }) => {
         <span className="text-yellow-400">★</span>
 
         <span className="font-semibold text-slate-800">
-          {route.rating}
+          {route.rating.toFixed(1)}
         </span>
 
         <span className="text-slate-400">
@@ -91,11 +91,13 @@ const BusRouteCard = ({ route, onClick }) => {
       <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-5">
         <div>
           <p className="text-sm font-semibold text-slate-800">
-            {route.ticketPrice}
+            {route.ticketPrice || "Đang cập nhật"}
           </p>
 
           <p className="mt-1 text-xs text-slate-400">
-            {route.frequency} phút/chuyến
+            {route.frequency > 0
+              ? `${route.frequency} phút/chuyến`
+              : "Đang cập nhật"}
           </p>
         </div>
 
