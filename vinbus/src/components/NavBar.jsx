@@ -19,8 +19,9 @@ const NavBar = () => {
           >
             <span
               className="self-center text-2xl text-heading font-bold whitespace-nowrap text-green-600
-              backdrop-blur-3xl shadow-2xl px-2 py-1 rounded-2xl"
+              backdrop-blur-3xl shadow-2xl px-2 py-1 rounded-2xl flex"
             >
+              <img src="/vinbus_logo-removebg-preview.png" alt="" className="h-8" />
               VinBus
             </span>
           </a>
@@ -124,6 +125,18 @@ const NavBar = () => {
             <span>👤</span>
             Hồ sơ
           </Link>
+
+            {/* Admin */}
+      {user?.role === "admin" && (
+      <Link
+        to="/admin/routes"
+        onClick={() => setIsProfileOpen(false)}
+        className="mt-2 flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-emerald-50 hover:text-emerald-600"
+      >
+        <span className="text-lg">🚌</span>
+        <span>Quản lý tuyến xe</span>
+      </Link>
+      )}
 
           <button
             type="button"

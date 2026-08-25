@@ -1,11 +1,14 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
-export const getRoutes = async (search = "") => {
+export const getRoutes = async (search = "", limit) => {
   const params = new URLSearchParams();
-  params.append("limit", "50");
 
   if (search.trim()) {
     params.append("search", search.trim());
+  }
+
+  if (limit) {
+    params.append("limit", limit);
   }
 
   const query = params.toString();
@@ -23,4 +26,32 @@ export const getRoutes = async (search = "") => {
   }
 
   return result.data;
+};
+
+export const deleteRoute = async (routeId) => {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    throw new Error("Vui lòng đăng nhập.");
+  }
+
+  const response = await fetch(
+    `${API_URL}/api/routes/${routeId}`,
+    {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      result.message || "Không thể xóa tuyến xe."
+    );
+  }
+
+  return result;
 };

@@ -168,3 +168,44 @@ export const updateReview = async (req, res, next) => {
         next(error);
     }
 };
+
+// Admin: lấy tất cả review
+export const getAllReviews = async (req, res, next) => {
+  try {
+    const reviews = await Review.find()
+      .populate("route", "routeNumber name")
+      .sort({ createdAt: -1 });
+
+    res.status(200).json({
+      success: true,
+      data: reviews,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Admin: xóa bất kỳ review nào
+export const adminDeleteReview = async (req, res, next) => {
+  try {
+    const { reviewId } = req.params;
+
+    const review = await Review.findById(reviewId);
+
+    if (!review) {
+      return res.status(404).json({
+        success: false,
+        message: "Không tìm thấy review.",
+      });
+    }
+
+    await Review.findByIdAndDelete(reviewId);
+
+    res.status(200).json({
+      success: true,
+      message: "Đã xóa review.",
+    });
+  } catch (error) {
+    next(error);
+  }
+};

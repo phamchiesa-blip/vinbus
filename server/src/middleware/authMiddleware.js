@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
+import User from '../models/User.js'
 
-const authMiddleware = (req, res, next) => {
+const authMiddleware = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
 
@@ -18,7 +19,18 @@ const authMiddleware = (req, res, next) => {
       process.env.JWT_SECRET
     );
 
-    req.user = decoded;
+    // Lấy thông tin user từ database
+    const user = await User.findById(decoded.id);
+
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "Người dùng không tồn tại.",
+      });
+    }
+
+    // Lưu user vào request
+    req.user = user;
 
     next();
   } catch (error) {

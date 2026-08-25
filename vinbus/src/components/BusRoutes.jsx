@@ -14,7 +14,7 @@ const BusRoutes = ({ searchQuery, onSelectRoute, onClearSearch }) => {
       setLoading(true);
       setError(null);
 
-      const response = await getRoutes(searchQuery);
+      const response = await getRoutes(searchQuery, 50);
 
       setRoutes(response);
     } catch (err) {

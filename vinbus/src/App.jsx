@@ -9,6 +9,9 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import Profile from './pages/Profile'
 
+import AdminRoute from './components/AdminRoute'
+import AdminDashboard from "./pages/AdminDashboard";
+
 function App() {
   return (
     <>
@@ -22,6 +25,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/admin/routes" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         </Routes>
       </main>
       <Footer />
