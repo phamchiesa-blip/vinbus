@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Bến xe Mỹ Đình",
+    "order": 1,
+    "lat": 21.0282668,
+    "lng": 105.7775195
+  },
+  {
+    "name": "Trước Phạm Hùng-Đình Thôn",
+    "order": 2,
+    "lat": 21.0229637,
+    "lng": 105.7785171
+  },
+  {
+    "name": "Nhà CT5 KĐT Sông Đà",
+    "order": 3,
+    "lat": 21.0170614,
+    "lng": 105.775857
+  },
+  {
+    "name": "Nhà CT5-D KĐT Mỹ Đình",
+    "order": 4,
+    "lat": 21.0185147,
+    "lng": 105.7811606
+  },
+  {
+    "name": "Bảo tàng Hà Nội",
+    "order": 5,
+    "lat": 21.010013,
+    "lng": 105.786309
+  },
+  {
+    "name": "Trung tâm Hội nghị Quốc Gia",
+    "order": 6,
+    "lat": 21.00683,
+    "lng": 105.790634
+  },
+  {
+    "name": "289 Khuất Duy Tiến",
+    "order": 7,
+    "lat": 21.0023691,
+    "lng": 105.7936443
+  },
+  {
+    "name": "39 Khuất Duy Tiến",
+    "order": 8,
+    "lat": 21.0015464,
+    "lng": 105.7949813
+  },
+  {
+    "name": "UBND phường Thanh Xuân",
+    "order": 9,
+    "lat": 20.9947331,
+    "lng": 105.7997403
+  },
+  {
+    "name": "Công ty Giày Thượng Đình",
+    "order": 10,
+    "lat": 20.9932624,
+    "lng": 105.8062199
+  },
+  {
+    "name": "Trường Đại học Khoa học tự nhiên",
+    "order": 11,
+    "lat": 20.9953045,
+    "lng": 105.8091397
+  },
+  {
+    "name": "Ga Thượng Đình",
+    "order": 12,
+    "lat": 20.9978745,
+    "lng": 105.8129738
+  },
+  {
+    "name": "Trường THPT Huỳnh Thúc Kháng -129T Nguyễn Trãi",
+    "order": 13,
+    "lat": 20.9989047,
+    "lng": 105.815139
+  },
+  {
+    "name": "Số 69A Nguyễn Trãi",
+    "order": 14,
+    "lat": 21.0017345,
+    "lng": 105.818801
+  },
+  {
+    "name": "225 Trường Chinh",
+    "order": 15,
+    "lat": 21.0013518,
+    "lng": 105.8258848
+  },
+  {
+    "name": "Bảo Tàng PKKQ",
+    "order": 16,
+    "lat": 20.9995408,
+    "lng": 105.8292421
+  },
+  {
+    "name": "Số 107 Trường Chinh",
+    "order": 17,
+    "lat": 21.001368,
+    "lng": 105.8354419
+  },
+  {
+    "name": "197 Đại La",
+    "order": 18,
+    "lat": 20.9970495,
+    "lng": 105.8438587
+  },
+  {
+    "name": "89 Đại La",
+    "order": 19,
+    "lat": 20.9971428,
+    "lng": 105.8442252
+  },
+  {
+    "name": "32 Minh Khai",
+    "order": 20,
+    "lat": 20.9957019,
+    "lng": 105.8506838
+  },
+  {
+    "name": "Số 212-214 Minh Khai",
+    "order": 21,
+    "lat": 20.9952238,
+    "lng": 105.8546609
+  },
+  {
+    "name": "308 Minh Khai",
+    "order": 22,
+    "lat": 20.9956658,
+    "lng": 105.8608827
+  },
+  {
+    "name": "386-388 Minh Khai",
+    "order": 23,
+    "lat": 20.9966848,
+    "lng": 105.8638045
+  },
+  {
+    "name": "Times City (478 Minh Khai)",
+    "order": 24,
+    "lat": 20.9977819,
+    "lng": 105.8670945
+  },
+  {
+    "name": "Đối diện Aeon Mall Long Biên",
+    "order": 25,
+    "lat": 21.0271231,
+    "lng": 105.8999586
+  },
+  {
+    "name": "42 Ngọc Trì",
+    "order": 26,
+    "lat": 21.0223458,
+    "lng": 105.9068824
+  },
+  {
+    "name": "Đối diện Trường Tiểu Học Thạch Bàn A",
+    "order": 27,
+    "lat": 21.019149,
+    "lng": 105.9126863
+  },
+  {
+    "name": "Đối diện Trường Trung học VinSchool Ocean Park",
+    "order": 28,
+    "lat": 20.994477,
+    "lng": 105.9366321
+  },
+  {
+    "name": "Đối diện Tòa nhà S2.01",
+    "order": 29,
+    "lat": 20.9895078,
+    "lng": 105.9408467
+  },
+  {
+    "name": "Bến trả Ocean Park 2, 3",
+    "order": 30,
+    "lat": 20.9905026,
+    "lng": 105.943966
+  },
+  {
+    "name": "Đại học VinUni",
+    "order": 31,
+    "lat": 20.9913041,
+    "lng": 105.9457424
+  },
+  {
+    "name": "KTX Đại học VinUni",
+    "order": 32,
+    "lat": 20.9896354,
+    "lng": 105.948549
+  },
+  {
+    "name": "139 Hải Âu 2",
+    "order": 33,
+    "lat": 20.9921465,
+    "lng": 105.9551893
+  },
+  {
+    "name": "Điểm đỗ xe OCP",
+    "order": 34,
+    "lat": 20.9915143,
+    "lng": 105.9605405
+  }
+]

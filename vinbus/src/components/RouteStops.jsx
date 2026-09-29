@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BusRouteMap from "./map/BusRouteMap";
 
 const RouteStops = ({ route }) => {
   const [direction, setDirection] = useState("outbound");
@@ -118,8 +119,26 @@ const RouteStops = ({ route }) => {
         </div>
       </div>
 
+      {/* Route Map */}
+      {currentRoute?.geometry && (
+        <div className="mt-8">
+          <div className="mb-3 flex items-center justify-between">
+            <h3 className="text-base font-semibold text-slate-800">
+              Bản đồ trực quan tuyến đường
+            </h3>
+            <span className="text-xs font-medium text-slate-400">
+              {currentRoute?.stops?.length || 0} điểm dừng
+            </span>
+          </div>
+          <BusRouteMap
+            geometry={currentRoute.geometry}
+            stops={currentRoute.stops}
+          />
+        </div>
+      )}
+
       {/* Stops */}
-      <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+      <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200">
         <div className="max-h-[520px] overflow-y-auto p-5 md:p-7">
           {stops.length === 0 ? (
             <p className="py-10 text-center text-sm text-slate-400">

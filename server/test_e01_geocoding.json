@@ -1,0 +1,318 @@
+{
+  "routeNumber": "E01",
+  "routeName": "Bến xe Mỹ Đình - KĐT Ocean Park",
+  "direction": "outbound",
+  "totalStops": 34,
+  "successCount": 33,
+  "failedCount": 1,
+  "successRate": "97.1%",
+  "timestamp": "2026-09-26T14:11:02.740Z",
+  "stops": [
+    {
+      "name": "Bến xe Mỹ Đình",
+      "order": 1,
+      "queryUsed": "Bến xe Mỹ Đình, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0282668,
+      "lng": 105.7775195,
+      "matchedName": "Bến xe Mỹ Đình, 20, Đường Phạm Hùng, Phú Mỹ, Xuân Phong, Phường Từ Liêm, Hà Nội, 12016, Việt Nam"
+    },
+    {
+      "name": "Trước Phạm Hùng-Đình Thôn",
+      "order": 2,
+      "queryUsed": "Phạm Hùng-Đình Thôn, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0229637,
+      "lng": 105.7785171,
+      "matchedName": "Gần ngã tư Phạm Hùng - Đình Thôn (cột sau), Đường Phạm Hùng, Nhân Mỹ, Xuân Phong, Phường Từ Liêm, Hà Nội, 12016, Việt Nam"
+    },
+    {
+      "name": "Nhà CT5 KĐT Sông Đà",
+      "order": 3,
+      "queryUsed": "CT5 Khu đô thị Sông Đà, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0170614,
+      "lng": 105.775857,
+      "matchedName": "Khu TT1, Khu đô thị Mỹ Đình Sông Đà, Mễ Trì, Phường Từ Liêm, Hà Nội, 12016, Việt Nam"
+    },
+    {
+      "name": "Nhà CT5-D KĐT Mỹ Đình",
+      "order": 4,
+      "queryUsed": "CT5-D Khu đô thị Mỹ Đình, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0185147,
+      "lng": 105.7811606,
+      "matchedName": "Nhà CT5 KĐT Sông Đà Mỹ Đình - Phạm Hùng, Đường Phạm Hùng, Xuân Phong, Phường Từ Liêm, Hà Nội, 12016, Việt Nam"
+    },
+    {
+      "name": "Bảo tàng Hà Nội",
+      "order": 5,
+      "queryUsed": "Bảo tàng Hà Nội, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.010013,
+      "lng": 105.786309,
+      "matchedName": "Bảo tàng Hà Nội, Đường Phạm Hùng, Mễ Trì, Phường Từ Liêm, Hà Nội, 12016, Việt Nam"
+    },
+    {
+      "name": "Trung tâm Hội nghị Quốc Gia",
+      "order": 6,
+      "queryUsed": "Trung tâm Hội nghị Quốc Gia, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0064671,
+      "lng": 105.7870381,
+      "matchedName": "Trung tâm Hội nghị Quốc gia Việt Nam, Đường số 5, Trung tâm Hội nghị Quốc gia Việt Nam, Mễ Trì, Phường Từ Liêm, Hà Nội, 12016, Việt Nam"
+    },
+    {
+      "name": "289 Khuất Duy Tiến",
+      "order": 7,
+      "queryUsed": "289 Khuất Duy Tiến, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0023691,
+      "lng": 105.7936443,
+      "matchedName": "Taisei Square Hà Nội, 289, Đường Khuất Duy Tiến, Phường Đại Mỗ, Hà Nội, 10161, Việt Nam"
+    },
+    {
+      "name": "39 Khuất Duy Tiến",
+      "order": 8,
+      "queryUsed": "39 Khuất Duy Tiến, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0015464,
+      "lng": 105.7949813,
+      "matchedName": "Đường Khuất Duy Tiến, Phường Đại Mỗ, Hà Nội, 11417, Việt Nam"
+    },
+    {
+      "name": "UBND phường Thanh Xuân",
+      "order": 9,
+      "queryUsed": "Ủy ban nhân dân phường Thanh Xuân, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9947331,
+      "lng": 105.7997403,
+      "matchedName": "Đảng uỷ - HĐND - UBND phường Thanh Xuân, 9, Đường Khuất Duy Tiến, Phường Thanh Xuân, Hà Nội, 11417, Việt Nam"
+    },
+    {
+      "name": "Công ty Giày Thượng Đình",
+      "order": 10,
+      "queryUsed": "Công ty Giày Thượng Đình, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0128227,
+      "lng": 105.8035458,
+      "matchedName": "Công Ty Cổ Phần Zenor Group, 03, Phố Nguyễn Thị Định, Trung Kính Thượng, Kẻ Giàn, Phường Yên Hòa, Hà Nội, 11312, Việt Nam"
+    },
+    {
+      "name": "Trường Đại học Khoa học tự nhiên",
+      "order": 11,
+      "queryUsed": "Trường Đại học Khoa học tự nhiên, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9959221,
+      "lng": 105.8079524,
+      "matchedName": "Trường Đại học Khoa học Tự nhiên, 334, Đường Nguyễn Trãi, Kẻ Mọc, Phường Thanh Xuân, Hà Nội, 11417, Việt Nam"
+    },
+    {
+      "name": "Ga Thượng Đình",
+      "order": 12,
+      "queryUsed": "Ga Thượng Đình, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9976607,
+      "lng": 105.8122176,
+      "matchedName": "Ga Thượng Đình, Phố Chính Kinh, Chính Kinh, Kẻ Mọc, Phường Thanh Xuân, Hà Nội, 11417, Việt Nam"
+    },
+    {
+      "name": "Trường THPT Huỳnh Thúc Kháng -129T Nguyễn Trãi",
+      "order": 13,
+      "queryUsed": "Trường Trường THPT Huỳnh Thúc Kháng -129T Nguyễn Trãi, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9989047,
+      "lng": 105.815139,
+      "matchedName": "Trường Trung học phổ thông Huỳnh Thúc Kháng, 131, Đường Nguyễn Trãi, Thượng Đình, Phường Khương Đình, Hà Nội, 11410, Việt Nam"
+    },
+    {
+      "name": "Số 69A Nguyễn Trãi",
+      "order": 14,
+      "queryUsed": "69A Nguyễn Trãi, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9866179,
+      "lng": 105.7961176,
+      "matchedName": "Đường Nguyễn Trãi, Phùng Khoang, Phường Đại Mỗ, Hà Nội, 12011, Việt Nam"
+    },
+    {
+      "name": "225 Trường Chinh",
+      "order": 15,
+      "queryUsed": "225 Trường Chinh, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0013518,
+      "lng": 105.8258848,
+      "matchedName": "225, Đường Trường Chinh, Khương Trung, Phương Liệt, Phường Phương Liệt, Hà Nội, 11412, Việt Nam"
+    },
+    {
+      "name": "Bảo Tàng PKKQ",
+      "order": 16,
+      "queryUsed": "Bảo Tàng Phòng không Không quân, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9995408,
+      "lng": 105.8292421,
+      "matchedName": "Bảo tàng Phòng không - Không quân, 173C, Đường Trường Chinh, Phương Liệt, Phường Phương Liệt, Hà Nội, 11412, Việt Nam"
+    },
+    {
+      "name": "Số 107 Trường Chinh",
+      "order": 17,
+      "queryUsed": "107 Trường Chinh, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.001368,
+      "lng": 105.8354419,
+      "matchedName": "Ngõ 120 Đường Trường Chinh, Khu tập thể Phương Mai, Phường Kim Liên, Hà Nội, 11520, Việt Nam"
+    },
+    {
+      "name": "197 Đại La",
+      "order": 18,
+      "queryUsed": "197 Đại La, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9970495,
+      "lng": 105.8438587,
+      "matchedName": "Phố Đại La, Phường Tương Mai, Hà Nội, 11715, Việt Nam"
+    },
+    {
+      "name": "89 Đại La",
+      "order": 19,
+      "queryUsed": "89 Đại La, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9971428,
+      "lng": 105.8442252,
+      "matchedName": "Phố Đại La, Bách Kinh Xây, Phường Bạch Mai, Hà Nội, 11618, Việt Nam"
+    },
+    {
+      "name": "32 Minh Khai",
+      "order": 20,
+      "queryUsed": "32 Minh Khai, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9957019,
+      "lng": 105.8506838,
+      "matchedName": "32 Minh Khai, Phố Minh Khai, Kẻ Mơ, Phường Tương Mai, Hà Nội, 11715, Việt Nam"
+    },
+    {
+      "name": "Số 212-214 Minh Khai",
+      "order": 21,
+      "queryUsed": "212-214 Minh Khai, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.6939416,
+      "lng": 105.9700306,
+      "matchedName": "Minh Khai, Hà Nội, 13930, Việt Nam"
+    },
+    {
+      "name": "308 Minh Khai",
+      "order": 22,
+      "queryUsed": "308 Minh Khai, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9956658,
+      "lng": 105.8608827,
+      "matchedName": "308 Minh Khai (Gần cầu Mai Động), Phố Minh Khai, Mai Động, Kẻ Mơ, Phường Tương Mai, Hà Nội, 11715, Việt Nam"
+    },
+    {
+      "name": "386-388 Minh Khai",
+      "order": 23,
+      "queryUsed": "386-388 Minh Khai, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9966848,
+      "lng": 105.8638045,
+      "matchedName": "386-388 Minh Khai, Phố Minh Khai, Mơ Táo, Phường Vĩnh Tuy, Hà Nội, 11622, Việt Nam"
+    },
+    {
+      "name": "Times City (478 Minh Khai)",
+      "order": 24,
+      "queryUsed": "478 Minh Khai, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.6939416,
+      "lng": 105.9700306,
+      "matchedName": "Minh Khai, Hà Nội, 13930, Việt Nam"
+    },
+    {
+      "name": "Đối diện Aeon Mall Long Biên",
+      "order": 25,
+      "queryUsed": "Aeon Mall Long Biên, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0271231,
+      "lng": 105.8999586,
+      "matchedName": "AEON Mall Long Biên, 27, Đường Cổ Linh, Nha, Phường Long Biên, Hà Nội, 11814, Việt Nam"
+    },
+    {
+      "name": "42 Ngọc Trì",
+      "order": 26,
+      "queryUsed": "42 Ngọc Trì, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0223458,
+      "lng": 105.9068824,
+      "matchedName": "42 Ngọc Trì, Đường Cổ Linh, Ngọc Trì 1, Phường Long Biên, Hà Nội, 11814, Việt Nam"
+    },
+    {
+      "name": "Đối diện Trường Tiểu Học Thạch Bàn A",
+      "order": 27,
+      "queryUsed": "Trường Tiểu Học Thạch Bàn A, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.019149,
+      "lng": 105.9126863,
+      "matchedName": "Trường Tiểu học Thạch Bàn (Phân hiệu), 114, Ngõ 318 phố Ngọc Trì, Ngô 2, Phường Long Biên, Hà Nội, 08443, Việt Nam"
+    },
+    {
+      "name": "Đối diện Trường Trung học VinSchool Ocean Park",
+      "order": 28,
+      "queryUsed": "Trường Trung học VinSchool Ocean Park, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.994477,
+      "lng": 105.9366321,
+      "matchedName": "Trường Trung học VinSchool Ocean Park, Đường Đại Dương, Vinhomes Ocean Park, Xã Gia Lâm, Hà Nội, 12428, Việt Nam"
+    },
+    {
+      "name": "Đối diện Tòa nhà S2.01",
+      "order": 29,
+      "queryUsed": "S2.01, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 21.0072616,
+      "lng": 105.73722,
+      "matchedName": "S2.01, Đường Vạn Xuân, Vinhomes Smart City, Tây Mỗ, Phường Tây Mỗ, Hà Nội, 11209, Việt Nam"
+    },
+    {
+      "name": "Bến trả Ocean Park 2, 3",
+      "order": 30,
+      "queryUsed": "Ocean Park 2, 3, Hà Nội, Việt Nam",
+      "success": false,
+      "lat": null,
+      "lng": null,
+      "error": "Không tìm thấy tọa độ phù hợp trên OSM Nominatim"
+    },
+    {
+      "name": "Đại học VinUni",
+      "order": 31,
+      "queryUsed": "Đại học VinUni, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9913041,
+      "lng": 105.9457424,
+      "matchedName": "Đại học VinUni, Đường Hải Đăng, Vinhomes Ocean Park, Xã Gia Lâm, Hà Nội, 12428, Việt Nam"
+    },
+    {
+      "name": "KTX Đại học VinUni",
+      "order": 32,
+      "queryUsed": "Ký túc xá Đại học VinUni, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9896354,
+      "lng": 105.948549,
+      "matchedName": "KTX Đại học VinUni, Đường Hải Đăng, Vinhomes Ocean Park, Xã Gia Lâm, Hà Nội, 12428, Việt Nam"
+    },
+    {
+      "name": "139 Hải Âu 2",
+      "order": 33,
+      "queryUsed": "139 Hải Âu 2, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9921465,
+      "lng": 105.9551893,
+      "matchedName": "139 Hải Âu 2, Hải Âu 2, Vinhomes Ocean Park, Xã Gia Lâm, Hà Nội, 12428, Việt Nam"
+    },
+    {
+      "name": "Điểm đỗ xe OCP",
+      "order": 34,
+      "queryUsed": "Ocean Park, Hà Nội, Việt Nam",
+      "success": true,
+      "lat": 20.9912701,
+      "lng": 105.9417216,
+      "matchedName": "Sapphire 2 Vinhomes Ocean Park, Xã Gia Lâm, Hà Nội, 12428, Việt Nam"
+    }
+  ]
+}

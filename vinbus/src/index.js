@@ -249,7 +249,7 @@ export const VinBusRoute = [
     "259 Minh Khai",
     "199 Minh Khai",
     "139 - 141 Minh Khai",
-    "Số 5 Minh Khai ( chợ Mơ)",
+    "Số 5 Minh Khai (chợ Mơ)",
     "66 Đại La",
     "128C Đại La",
     "86 Trường Chinh",
@@ -5926,3 +5926,8 @@ export const VinBusRoute = [
   ]
   },
 ];
+
+
+
+
+

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Công ty Giày Thượng Đình",
+    "order": 10,
+    "lat": 20.9932624,
+    "lng": 105.8062199,
+    "googleMapsUrl": "https://maps.app.goo.gl/BvTC2ihmjtFGjmkB7",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: Trước Số 277 Nguyễn Trãi - Bách Hóa Giày Thượng Đình"
+  },
+  {
+    "name": "Số 69A Nguyễn Trãi",
+    "order": 14,
+    "lat": 21.0017345,
+    "lng": 105.818801,
+    "googleMapsUrl": "https://maps.app.goo.gl/UWWuQh3gA7s5nneH7",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: Số 69A Nguyễn Trãi"
+  },
+  {
+    "name": "Số 212-214 Minh Khai",
+    "order": 21,
+    "lat": 20.9952238,
+    "lng": 105.8546609,
+    "googleMapsUrl": "https://maps.app.goo.gl/ZdCbF2uYotu4y33z5",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: 218-220 Minh Khai"
+  },
+  {
+    "name": "Times City (478 Minh Khai)",
+    "order": 24,
+    "lat": 20.9977819,
+    "lng": 105.8670945,
+    "googleMapsUrl": "https://maps.app.goo.gl/Jp4TmSXw65ahj6Ts8",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: Viện Kinh Tế Và Kỹ Thuật Dệt May - 478 Minh Khai"
+  },
+  {
+    "name": "Đối diện Tòa nhà S2.01",
+    "order": 29,
+    "lat": 20.9895078,
+    "lng": 105.9408467,
+    "googleMapsUrl": "https://maps.app.goo.gl/o3uy584MexAmPPUP6",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: Đối Diện Tòa Nhà Techno Park"
+  },
+  {
+    "name": "Bến trả Ocean Park 2, 3",
+    "order": 30,
+    "lat": 20.9905026,
+    "lng": 105.943966,
+    "googleMapsUrl": "https://maps.app.goo.gl/wkzUvb3CrUhbdCqz5",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: Bến Trả OCP 2-3 (Cạnh Vinuni)"
+  },
+  {
+    "name": "Điểm đỗ xe OCP",
+    "order": 34,
+    "lat": 20.9915143,
+    "lng": 105.9605405,
+    "googleMapsUrl": "https://maps.app.goo.gl/4VuthnXrFsFzqrci6",
+    "status": "FOUND",
+    "note": "Trích xuất từ Google Maps: Điểm Đỗ Xe Buýt Ocean Park"
+  }
+]

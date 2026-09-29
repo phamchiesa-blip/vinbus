@@ -5,8 +5,8 @@ import RouteStops from "./RouteStops";
 import DepartureTimes from "./DepartureTimes";
 import Reviews from "./Reviews";
 
-const RouteTabs = ({ route }) => {
-  const [activeTab, setActiveTab] = useState("overview");
+const RouteTabs = ({ route, defaultTab = "route" }) => {
+  const [activeTab, setActiveTab] = useState(defaultTab);
 
   const tabs = [
     {

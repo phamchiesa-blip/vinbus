@@ -82,8 +82,31 @@ const busRouteSchema = new mongoose.Schema(
             type: Number,
             required: true,
           },
+
+          lat: {
+            type: Number,
+            default: null,
+          },
+
+          lng: {
+            type: Number,
+            default: null,
+          },
         },
       ],
+
+      geometry: {
+        type: {
+          type: String,
+          enum: ["LineString"],
+          default: "LineString",
+        },
+
+        coordinates: {
+          type: [[Number]],
+          default: [],
+        },
+      },
     },
 
     inbound: {
@@ -111,8 +134,31 @@ const busRouteSchema = new mongoose.Schema(
             type: Number,
             required: true,
           },
+
+          lat: {
+            type: Number,
+            default: null,
+          },
+
+          lng: {
+            type: Number,
+            default: null,
+          },
         },
       ],
+
+      geometry: {
+        type: {
+          type: String,
+          enum: ["LineString"],
+          default: "LineString",
+        },
+
+        coordinates: {
+          type: [[Number]],
+          default: [],
+        },
+      },
     },
 
     operatingHours: {
