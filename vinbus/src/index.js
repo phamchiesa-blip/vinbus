@@ -2736,7 +2736,7 @@ export const VinBusRoute = [
     "Hầm đi bộ HS10 – Trung tâm triển lãm Quốc gia",
     "Đối diện chung cư Eurowindow River Park",
     "Hầm chui Dân sinh gần Ngõ 65 Lý Sơn",
-    "Hầm chui Dân sinh gần Ngõ 65 Lý Sơn",
+    "Hầm chui dân sinh đối diện No15C - DDN3 (Lý Sơn)",
     "Công ty Xe Lửa Gia Lâm",
     "549 Nguyễn Văn Cừ",
     "Đối diện 107 Nguyễn Sơn",

@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Sân bay Nội Bài (Nhà ga T2)",
+    "order": 1,
+    "lat": 21.216962459958356,
+    "lng": 105.79378256406646
+  },
+  {
+    "name": "Sảnh A nhà ga T1",
+    "order": 2,
+    "lat": 21.21452670698322,
+    "lng": 105.80250324714346
+  },
+  {
+    "name": "Sảnh E nhà ga T1",
+    "order": 3,
+    "lat": 21.21484291401492,
+    "lng": 105.80003164716535
+  },
+  {
+    "name": "Đối diện nhà T1 Sân bay Nội Bài",
+    "order": 4,
+    "lat": 21.21293946828147,
+    "lng": 105.80132101015231
+  },
+  {
+    "name": "Cảng vụ hàng không miền bắc",
+    "order": 5,
+    "lat": 21.211123781165174,
+    "lng": 105.80748094837276
+  },
+  {
+    "name": "Đối diện Ga hàng hóa ALS",
+    "order": 6,
+    "lat": 21.210530004842855,
+    "lng": 105.80967505435548
+  },
+  {
+    "name": "Đối diện Công ty kỹ thuật Bay Vaeco Nội Bài",
+    "order": 7,
+    "lat": 21.209839852000428,
+    "lng": 105.81206672986761
+  },
+  {
+    "name": "Công ty CP Suất ăn Hàng không Nội Bài",
+    "order": 8,
+    "lat": 21.208961816595423,
+    "lng": 105.81517285220129
+  },
+  {
+    "name": "Hầm đi bộ HS8 - Đi Gia Lâm",
+    "order": 9,
+    "lat": 21.097838268761283,
+    "lng": 105.85709564855236
+  },
+  {
+    "name": "Hầm đi bộ HS10 – Trung tâm triển lãm Quốc gia",
+    "order": 10,
+    "lat": 21.09185491426118,
+    "lng": 105.86269514122367
+  },
+  {
+    "name": "Đối diện chung cư Eurowindow River Park",
+    "order": 11,
+    "lat": 21.07991049418049,
+    "lng": 105.87234793474624
+  },
+  {
+    "name": "Hầm chui Dân sinh gần Ngõ 65 Lý Sơn",
+    "order": 12,
+    "lat": 21.063921440588622,
+    "lng": 105.88138167540298
+  },
+  {
+    "name": "Hầm chui dân sinh đối diện No15C - DDN3 (Lý Sơn)",
+    "order": 13,
+    "lat": 21.05842829389748,
+    "lng": 105.88396716097492
+  },
+  {
+    "name": "Công ty Xe Lửa Gia Lâm",
+    "order": 14,
+    "lat": 21.052537832877828,
+    "lng": 105.88581953461853
+  },
+  {
+    "name": "549 Nguyễn Văn Cừ",
+    "order": 15,
+    "lat": 21.04951116572214,
+    "lng": 105.88328764976808
+  },
+  {
+    "name": "Đối diện 107 Nguyễn Sơn",
+    "order": 16,
+    "lat": 21.046142120315103,
+    "lng": 105.87941875275244
+  },
+  {
+    "name": "Trước Đoàn tiếp viên Hàng không Việt Nam Airline 30m",
+    "order": 17,
+    "lat": 21.04339712152539,
+    "lng": 105.88230358420714
+  },
+  {
+    "name": "Đối diện Trung tâm Y tế Hàng Không",
+    "order": 18,
+    "lat": 21.040660944523385,
+    "lng": 105.87942065137851
+  },
+  {
+    "name": "Công ty Thương mại và Dịch vụ Phương Trâm",
+    "order": 19,
+    "lat": 21.03262620299261,
+    "lng": 105.87944744132174
+  },
+  {
+    "name": "Qua trường THCS Long Biên",
+    "order": 20,
+    "lat": 21.029495067536867,
+    "lng": 105.88444134843255
+  },
+  {
+    "name": "106-108 Cổ Linh",
+    "order": 21,
+    "lat": 21.028258337170865,
+    "lng": 105.89158200511895
+  },
+  {
+    "name": "Đối diện Aeon Mall Long Biên (cột sau)",
+    "order": 22,
+    "lat": 21.02538687447028,
+    "lng": 105.89981414503298
+  },
+  {
+    "name": "42 Ngọc Trì",
+    "order": 23,
+    "lat": 21.022342119584124,
+    "lng": 105.90686289790999
+  },
+  {
+    "name": "Đối diện Trường Tiểu Học Thạch Bàn A",
+    "order": 24,
+    "lat": 21.018577032600774,
+    "lng": 105.91203765454343
+  },
+  {
+    "name": "Tòa nhà S2.09",
+    "order": 25,
+    "lat": 20.99322327422007,
+    "lng": 105.942360608453
+  },
+  {
+    "name": "Đại học VinUni",
+    "order": 26,
+    "lat": 20.991249913432448,
+    "lng": 105.9458150003439
+  },
+  {
+    "name": "KTX Đại học VinUni",
+    "order": 27,
+    "lat": 20.989492045954606,
+    "lng": 105.9488762116105
+  },
+  {
+    "name": "139 Hải Âu 2",
+    "order": 28,
+    "lat": 20.99216356680853,
+    "lng": 105.95518479821435
+  },
+  {
+    "name": "Điểm đỗ xe OCP",
+    "order": 29,
+    "lat": 20.99151232124371,
+    "lng": 105.96055194464974
+  }
+]
+

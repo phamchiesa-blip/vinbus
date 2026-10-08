@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Điểm đỗ xe OCP",
+    "order": 1,
+    "lat": 20.991510875865867,
+    "lng": 105.96042887521847
+  },
+  {
+    "name": "152 Hải Âu 2",
+    "order": 2,
+    "lat": 20.992307222466525,
+    "lng": 105.95509789714109
+  },
+  {
+    "name": "Đối diện KTX Đại học VinUni",
+    "order": 3,
+    "lat": 20.990024948102278,
+    "lng": 105.94834849842081
+  },
+  {
+    "name": "Đối diện Đại học VinUni",
+    "order": 4,
+    "lat": 20.991375641601334,
+    "lng": 105.94601666060348
+  },
+  {
+    "name": "Đối diện Tòa nhà S2.10",
+    "order": 5,
+    "lat": 20.992976765112953,
+    "lng": 105.94327904121268
+  },
+  {
+    "name": "Nhà để xe Hải Đăng",
+    "order": 6,
+    "lat": 20.994170877411307,
+    "lng": 105.94116062206378
+  },
+  {
+    "name": "Trường Tiểu Học Thạch Bàn A",
+    "order": 7,
+    "lat": 21.019810691560526,
+    "lng": 105.91125106425781
+  },
+  {
+    "name": "Mầm Non Hoa Mai-Ngọc Trì",
+    "order": 8,
+    "lat": 21.022732646837564,
+    "lng": 105.90641273152568
+  },
+  {
+    "name": "Aeon Mall Long Biên",
+    "order": 9,
+    "lat": 21.02557713799691,
+    "lng": 105.90016492679909
+  },
+  {
+    "name": "Đối diện ngõ 110 Cổ Linh",
+    "order": 10,
+    "lat": 21.028277520952372,
+    "lng": 105.89273913980948
+  },
+  {
+    "name": "Đối diện THCS Long Biên - Cổ Linh",
+    "order": 11,
+    "lat": 21.02966823638681,
+    "lng": 105.884716527249
+  },
+  {
+    "name": "Hồ Lâm Du",
+    "order": 12,
+    "lat": 21.032699167677354,
+    "lng": 105.87977021326509
+  },
+  {
+    "name": "Trung Tâm Y tế Hàng Không",
+    "order": 13,
+    "lat": 21.040179004531993,
+    "lng": 105.87912541278621
+  },
+  {
+    "name": "Trước Đoàn Tiếp Viên Hàng Không Việt Nam Airline 20M - Đường Lâm Hạ",
+    "order": 14,
+    "lat": 21.042991199525172,
+    "lng": 105.88204810745084
+  },
+  {
+    "name": "Trung tâm Văn hóa Hàng Không",
+    "order": 15,
+    "lat": 21.04565628767589,
+    "lng": 105.88081114353038
+  },
+  {
+    "name": "436 - 438 Nguyễn Văn Cừ (E10)",
+    "order": 16,
+    "lat": 21.047063477626,
+    "lng": 105.87889776269321
+  },
+  {
+    "name": "548 Nguyễn Văn Cừ",
+    "order": 17,
+    "lat": 21.048435506645575,
+    "lng": 105.88181060804028
+  },
+  {
+    "name": "654 Nguyễn Văn Cừ",
+    "order": 18,
+    "lat": 21.052331665207053,
+    "lng": 105.886093600605
+  },
+  {
+    "name": "Hầm chui dân sinh trước No15C - DDN3 (Lý Sơn)",
+    "order": 19,
+    "lat": 21.058667138565465,
+    "lng": 105.8844921286903
+  },
+  {
+    "name": "Hầm chui dân sinh đối diện Ngõ 65 Lý Sơn",
+    "order": 20,
+    "lat": 21.064109952682117,
+    "lng": 105.88190148367816
+  },
+  {
+    "name": "Chung cư Eurowindow River Park",
+    "order": 21,
+    "lat": 21.078734254041365,
+    "lng": 105.87366541670436
+  },
+  {
+    "name": "Hầm đi bộ HS10 – Đối diện TT Triển lãm Quốc gia",
+    "order": 22,
+    "lat": 21.088031556996683,
+    "lng": 105.86688242014459
+  },
+  {
+    "name": "Hầm đi bộ HS8 - Đi Đông Anh",
+    "order": 23,
+    "lat": 21.092200944284645,
+    "lng": 105.86305426037075
+  },
+  {
+    "name": "Công ty Xăng dầu Hàng không Việt Nam (Vinapco)",
+    "order": 24,
+    "lat": 21.20993025105737,
+    "lng": 105.81447036876105
+  },
+  {
+    "name": "Cổng A Công Ty Kỹ Thuật Bay Vaeco Nội Bài",
+    "order": 25,
+    "lat": 21.210682669111215,
+    "lng": 105.81169884720326
+  },
+  {
+    "name": "Nhà ga Hàng hóa Nội Bài",
+    "order": 26,
+    "lat": 21.21196035137163,
+    "lng": 105.80731314269754
+  },
+  {
+    "name": "Sảnh A nhà ga T1",
+    "order": 27,
+    "lat": 21.214521473257786,
+    "lng": 105.80250247051298
+  },
+  {
+    "name": "Sảnh E nhà ga T1",
+    "order": 28,
+    "lat": 21.214821053083455,
+    "lng": 105.80003872696999
+  },
+  {
+    "name": "Sân bay Nội Bài (Nhà ga T2)",
+    "order": 29,
+    "lat": 21.216948863550616,
+    "lng": 105.79378449445429
+  }
+]
+
