@@ -5101,6 +5101,7 @@ export const VinBusRoute = [
     end: "Bến xe Mỹ Đình",
     stops: [
     "(A) UBND xã Duyên Thái",
+    "Làng Thọ Am",
     "Đối diện XN Thiết bị y tế 130 - Ngũ Hiệp",
     "Cổng nhà thờ thôn Tự Khoát",
     "Đối diện Cty CP Vinafut",
@@ -5185,6 +5186,7 @@ export const VinBusRoute = [
     "Cty CP Vinafut",
     "Đối diện cổng nhà thờ thôn Tự Khoát",
     "XN thiết bị y tế 130 - Ngũ Hiệp",
+    "Làng Thọ Am",
     "(A) UBND xã Duyên Thái"
     ]
   },

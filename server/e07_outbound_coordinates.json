@@ -1,0 +1,153 @@
+[
+  {
+    "name": "Long Biên (Điểm đỗ xe buýt Yên Phụ)",
+    "order": 1,
+    "lat": 21.042914515077115,
+    "lng": 105.84803791582259
+  },
+  {
+    "name": "Điểm Trung Chuyển Long Biên (điểm E3.3)",
+    "order": 2,
+    "lat": 21.041329894198103,
+    "lng": 105.84934683384415
+  },
+  {
+    "name": "Ngã 4 Nguyễn Hữu Huân - Hàng Mắm",
+    "order": 3,
+    "lat": 21.033470161946934,
+    "lng": 105.85436604128468
+  },
+  {
+    "name": "Cung thiếu Nhi Hà Nội",
+    "order": 4,
+    "lat": 21.0281022077376,
+    "lng": 105.85561135809978
+  },
+  {
+    "name": "Trung tâm thương mại Tràng Tiền Plaza",
+    "order": 5,
+    "lat": 21.024082836470996,
+    "lng": 105.85363269059174
+  },
+  {
+    "name": "Bệnh viện Hữu Nghị Việt Nam - Cu Ba",
+    "order": 6,
+    "lat": 21.025009433585225,
+    "lng": 105.8504805310051
+  },
+  {
+    "name": "Bệnh viện Phụ sản Trung ương",
+    "order": 7,
+    "lat": 21.026242749120172,
+    "lng": 105.84641399744491
+  },
+  {
+    "name": "Cửa Nam - Phố ẩm thực Tống Duy Tân",
+    "order": 8,
+    "lat": 21.029450006618482,
+    "lng": 105.8423756842605
+  },
+  {
+    "name": "Vườn hoa Lênin - Cột Cờ Hà Nội",
+    "order": 9,
+    "lat": 21.031047899564584,
+    "lng": 105.83944808547672
+  },
+  {
+    "name": "60 Trần Phú - Bệnh Viện Xanh Pôn",
+    "order": 10,
+    "lat": 21.031752894680935,
+    "lng": 105.83589459559312
+  },
+  {
+    "name": "Bến xe Kim Mã - 140 Sơn Tây",
+    "order": 11,
+    "lat": 21.03264607249668,
+    "lng": 105.82905942250544
+  },
+  {
+    "name": "240 Kim Mã",
+    "order": 12,
+    "lat": 21.031734967732834,
+    "lng": 105.82404391710891
+  },
+  {
+    "name": "2/2C Khu Ngoại giao đoàn - Kim Mã (đường dưới)",
+    "order": 13,
+    "lat": 21.030823857389898,
+    "lng": 105.81670402164568
+  },
+  {
+    "name": "Hồ Ngọc Khánh",
+    "order": 14,
+    "lat": 21.02699390580918,
+    "lng": 105.81195457185396
+  },
+  {
+    "name": "Đối diện Đại học Luật Hà Nội",
+    "order": 15,
+    "lat": 21.022136916785573,
+    "lng": 105.80931241567053
+  },
+  {
+    "name": "Trung tâm Kiểm soát bệnh tật Hà Nội",
+    "order": 16,
+    "lat": 21.018371386713923,
+    "lng": 105.80712824400399
+  },
+  {
+    "name": "Đại học Lao động và Xã hội",
+    "order": 17,
+    "lat": 21.012421138785445,
+    "lng": 105.80135726470913
+  },
+  {
+    "name": "Bộ Khoa học & Công nghệ - Ngã 3 Hoàng Đạo Thúy",
+    "order": 18,
+    "lat": 21.01016252928777,
+    "lng": 105.79877427584579
+  },
+  {
+    "name": "BigC Thăng Long - 220 Trần Duy Hưng",
+    "order": 19,
+    "lat": 21.007326744669353,
+    "lng": 105.7947881275613
+  },
+  {
+    "name": "Ngã 3 Miếu Đầm - Đại lộ Thăng Long",
+    "order": 20,
+    "lat": 21.003151431406707,
+    "lng": 105.780916355438
+  },
+  {
+    "name": "Chung cư CT3A - KĐT Mễ trì Thượng",
+    "order": 21,
+    "lat": 21.00448971601855,
+    "lng": 105.77595728994945
+  },
+  {
+    "name": "Sân Golf Mỹ Đình Pearl - Đại lộ Thăng Long",
+    "order": 22,
+    "lat": 21.005692736558174,
+    "lng": 105.77018897252195
+  },
+  {
+    "name": "Xóm La - Đại lộ Thăng Long",
+    "order": 23,
+    "lat": 21.00765507907721,
+    "lng": 105.75945955523537
+  },
+  {
+    "name": "Bảo tàng Lịch sử Quân sự Việt Nam",
+    "order": 24,
+    "lat": 21.011006687684993,
+    "lng": 105.75702933257135
+  },
+  {
+    "name": "Điểm đỗ xe buýt Smart City (Đầu bến)",
+    "order": 25,
+    "lat": 21.004801580903038,
+    "lng": 105.75448470636304
+  }
+]
+

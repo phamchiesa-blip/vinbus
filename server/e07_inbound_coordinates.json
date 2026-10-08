@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Điểm đỗ xe buýt Smart City (Đầu bến)",
+    "order": 1,
+    "lat": 21.004797039794656,
+    "lng": 105.75450986917525
+  },
+  {
+    "name": "Ngã 3 - Quang Tiến",
+    "order": 2,
+    "lat": 21.006700050409016,
+    "lng": 105.75854391147948
+  },
+  {
+    "name": "Ngã 3 - Sa Đôi",
+    "order": 3,
+    "lat": 21.00475697610032,
+    "lng": 105.76785654118784
+  },
+  {
+    "name": "Ngã 3 - ĐL Thăng Long - Lê Quang Đạo",
+    "order": 4,
+    "lat": 21.003234549701073,
+    "lng": 105.77474445396982
+  },
+  {
+    "name": "Công ty Viễn thông Viettel",
+    "order": 5,
+    "lat": 21.001992558788288,
+    "lng": 105.78049511006607
+  },
+  {
+    "name": "KĐT Vinhomes Green Bay",
+    "order": 6,
+    "lat": 21.0015318176148,
+    "lng": 105.7853016286248
+  },
+  {
+    "name": "Vincom Trần Duy Hưng",
+    "order": 7,
+    "lat": 21.006747897126292,
+    "lng": 105.79496417214621
+  },
+  {
+    "name": "Bộ Khoa học & Công nghệ - Ngã 3 Hoàng Đạo Thúy.",
+    "order": 8,
+    "lat": 21.00982320619251,
+    "lng": 105.79900247152653
+  },
+  {
+    "name": "Trường Đại học Lao động & Xã hội",
+    "order": 9,
+    "lat": 21.012562541299445,
+    "lng": 105.80205191482473
+  },
+  {
+    "name": "99 Nguyễn Chí Thanh - Ký túc xá Đại học Giao thông",
+    "order": 10,
+    "lat": 21.018169105307123,
+    "lng": 105.80751943093706
+  },
+  {
+    "name": "Đại học Luật Hà Nội",
+    "order": 11,
+    "lat": 21.021425364596755,
+    "lng": 105.80936023851835
+  },
+  {
+    "name": "Học viện Hành chính Quốc gia",
+    "order": 12,
+    "lat": 21.02382419542675,
+    "lng": 105.81074924902862
+  },
+  {
+    "name": "Đối diện Hồ Ngọc Khánh",
+    "order": 13,
+    "lat": 21.02731221219625,
+    "lng": 105.8122478919241
+  },
+  {
+    "name": "Ngã 3 Vạn Bảo - Khu Ngoại giao đoàn",
+    "order": 14,
+    "lat": 21.03066033596411,
+    "lng": 105.81877897392467
+  },
+  {
+    "name": "211 Kim Mã",
+    "order": 15,
+    "lat": 21.03135984314839,
+    "lng": 105.82328588917888
+  },
+  {
+    "name": "Tòa nhà PTA - Số 1 Kim Mã",
+    "order": 16,
+    "lat": 21.032263424691077,
+    "lng": 105.82945316312478
+  },
+  {
+    "name": "Số 145 Nguyễn Thái Học",
+    "order": 17,
+    "lat": 21.031001755690635,
+    "lng": 105.83361116250762
+  },
+  {
+    "name": "Trường Tiểu Học Lý thường Kiệt - Ngã 3 Hoàng Diệu",
+    "order": 18,
+    "lat": 21.029480786440978,
+    "lng": 105.83891951020675
+  },
+  {
+    "name": "Cửa Nam - Số 7 Nguyễn Thái Học",
+    "order": 19,
+    "lat": 21.028333378066826,
+    "lng": 105.84295996896935
+  },
+  {
+    "name": "Tháp Hà Nội - Bệnh viện Phụ sản Trung ương",
+    "order": 20,
+    "lat": 21.025976098181005,
+    "lng": 105.84665284783725
+  },
+  {
+    "name": "Bệnh viện Hữu Nghị Việt Nam - Cu Ba.",
+    "order": 21,
+    "lat": 21.024927064024904,
+    "lng": 105.850130357194
+  },
+  {
+    "name": "Tràng Tiền Plaza - 16 Hai Bà Trưng",
+    "order": 22,
+    "lat": 21.023814168446155,
+    "lng": 105.85407699924487
+  },
+  {
+    "name": "Nhà hát Lớn Hà Nội (Đối diện 6C Phan Chu Trinh)",
+    "order": 23,
+    "lat": 21.02359473607543,
+    "lng": 105.85686369142475
+  },
+  {
+    "name": "Ngân hàng Nhà nước Việt Nam - Vườn hoa con Cóc_ CĐ",
+    "order": 24,
+    "lat": 21.026739902479793,
+    "lng": 105.8562515007159
+  },
+  {
+    "name": "23 Hàng Tre - Ngã 4 Lò Sũ",
+    "order": 25,
+    "lat": 21.031984986939655,
+    "lng": 105.85571481765376
+  },
+  {
+    "name": "Hàng Muối - Cầu Chương Dương",
+    "order": 26,
+    "lat": 21.034599721136622,
+    "lng": 105.85467164466561
+  },
+  {
+    "name": "Điểm trung chuyển Long Biên(điểm E1.2)",
+    "order": 27,
+    "lat": 21.041531117870083,
+    "lng": 105.84946388266522
+  },
+  {
+    "name": "Long Biên (Điểm đỗ xe buýt Yên Phụ)",
+    "order": 28,
+    "lat": 21.042900793631397,
+    "lng": 105.84804674015591
+  }
+]
