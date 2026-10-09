@@ -3475,7 +3475,7 @@ export const VinBusRoute = [
     "60 Lê Thanh Nghị",
     "Qua Viện tin học pháp ngữ 20m, Lê Thanh Nghị",
     "Kí túc xá ĐH Xây Dựng",
-    "106 Trần Đại Nghĩa",
+    "Tập Thể A10 128C Đại La",
     "196 Giải Phóng",
     "352 Giải Phóng",
     "Đối diện 807 Giải Phóng",
