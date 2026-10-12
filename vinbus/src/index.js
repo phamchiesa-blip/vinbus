@@ -4040,7 +4040,6 @@ export const VinBusRoute = [
     "373 Phạm Văn Đồng",
     "189 Phạm Văn Đồng",
     "68A Tân Xuân (chân cầu Thăng Long)",
-    "Số 90 Phạm Văn Đồng",
     "Đối diện số nhà 69 Hoàng Tăng Bí",
     "Đối diện Đại lý sơn PU Thế Anh",
     "Đối diện 30 Đức Thắng - Đông Ngạc",
