@@ -1,0 +1,243 @@
+[
+  {
+    "order": 1,
+    "name": "(A) BX Giáp Bát",
+    "lat": 20.980710905195444,
+    "lng": 105.84128225288846
+  },
+  {
+    "order": 2,
+    "name": "Số 36 Kim Đồng",
+    "lat": 20.98352642757399,
+    "lng": 105.84436274541733
+  },
+  {
+    "order": 3,
+    "name": "658 Trương Định",
+    "lat": 20.98135846255143,
+    "lng": 105.84525915871629
+  },
+  {
+    "order": 4,
+    "name": "Ga Giáp Bát - Giải phóng",
+    "lat": 20.976220277781984,
+    "lng": 105.84074239705342
+  },
+  {
+    "order": 5,
+    "name": "Ngã 3 Giải Phóng - Linh Đàm",
+    "lat": 20.971704265666062,
+    "lng": 105.84080690375879
+  },
+  {
+    "order": 6,
+    "name": "Ngã 4 Hoàng Liệt - Giải Phóng, Hoàng Liệt",
+    "lat": 20.96594618957935,
+    "lng": 105.84096782534468
+  },
+  {
+    "order": 7,
+    "name": "Tượng đài Liệt sĩ phường Hoàng Liệt, Hoàng Liệt",
+    "lat": 20.96617963624477,
+    "lng": 105.83814908577882
+  },
+  {
+    "order": 8,
+    "name": "Chợ Xanh Linh Đàm - UBND phường Hoàng Liệt, Hoàng Liệt",
+    "lat": 20.96644867698845,
+    "lng": 105.83508009056655
+  },
+  {
+    "order": 9,
+    "name": "Nhà NƠ. 1A KĐT Linh Đàm",
+    "lat": 20.964936910701233,
+    "lng": 105.83126922425186
+  },
+  {
+    "order": 10,
+    "name": "Đối diện chung cư HH1C Linh Đàm",
+    "lat": 20.964977424888254,
+    "lng": 105.82664051831466
+  },
+  {
+    "order": 11,
+    "name": "Công viên Bắc Linh Đàm",
+    "lat": 20.967179470132404,
+    "lng": 105.82653678717026
+  },
+  {
+    "order": 12,
+    "name": "Cầu Dậu - Khu đô thị Bắc Linh Đàm",
+    "lat": 20.970598599938466,
+    "lng": 105.82607625736563
+  },
+  {
+    "order": 13,
+    "name": "Khu đô thị Kim Văn, Kim Lũ - Nghiêm Xuân Yêm",
+    "lat": 20.972262407555252,
+    "lng": 105.8206834076984
+  },
+  {
+    "order": 14,
+    "name": "Trường Đại học Thăng Long - NGhiêm Xuân Yêm",
+    "lat": 20.976377901315324,
+    "lng": 105.81468707190025
+  },
+  {
+    "order": 15,
+    "name": "Đối diện cổng viện kiểm sát nhân dân thành phố Hà Nội",
+    "lat": 20.97631543649915,
+    "lng": 105.81051248713122
+  },
+  {
+    "order": 16,
+    "name": "Đối diện cổng viện K",
+    "lat": 20.96541401843396,
+    "lng": 105.79913102926858
+  },
+  {
+    "order": 17,
+    "name": "Đối diện Tòa nhà CT2 Chung cư viện bỏng, gần ngã ba Yên Xá",
+    "lat": 20.964643953073484,
+    "lng": 105.79392346293102
+  },
+  {
+    "order": 18,
+    "name": "Viện 103 - Phùng Hưng",
+    "lat": 20.967211097553662,
+    "lng": 105.78915095282858
+  },
+  {
+    "order": 19,
+    "name": "Công ty CP Xây lắp điện Hà Tây",
+    "lat": 20.97019516600708,
+    "lng": 105.7844673192573
+  },
+  {
+    "order": 20,
+    "name": "Cạnh tường rào Đài truyền hình Hà Tây cũ",
+    "lat": 20.970116736123526,
+    "lng": 105.78165737145993
+  },
+  {
+    "order": 21,
+    "name": "Văn phòng 2 \"Trung tâm dạy nghề\"",
+    "lat": 20.967792340587387,
+    "lng": 105.77877870209163
+  },
+  {
+    "order": 22,
+    "name": "Đối diện 29 Tô Hiệu",
+    "lat": 20.96500194585949,
+    "lng": 105.77517130655235
+  },
+  {
+    "order": 23,
+    "name": "Đối diện Metro Hà Đông",
+    "lat": 20.964874063169145,
+    "lng": 105.77294528197162
+  },
+  {
+    "order": 24,
+    "name": "Ga La Khê - 350 - 352 Quang Trung",
+    "lat": 20.963778965580893,
+    "lng": 105.76647294592088
+  },
+  {
+    "order": 25,
+    "name": "Giữa số 428 - 430 Quang Trung",
+    "lat": 20.96200086045864,
+    "lng": 105.76423751464506
+  },
+  {
+    "order": 26,
+    "name": "BRT Văn La - 530 - 532 Quang Trung",
+    "lat": 20.960150040210213,
+    "lng": 105.76190637703992
+  },
+  {
+    "order": 27,
+    "name": "678 - 680 Quang Trung",
+    "lat": 20.958059448855895,
+    "lng": 105.75922094763038
+  },
+  {
+    "order": 28,
+    "name": "870 Quang Trung",
+    "lat": 20.955561249768586,
+    "lng": 105.75582179983724
+  },
+  {
+    "order": 29,
+    "name": "Nissan Hà Đông",
+    "lat": 20.953935719709737,
+    "lng": 105.75367037549687
+  },
+  {
+    "order": 30,
+    "name": "Đối diện Trường TH Kinh tế Hà Tây",
+    "lat": 20.95210877543952,
+    "lng": 105.75124167917166
+  },
+  {
+    "order": 31,
+    "name": "Giáp hàng rào BX Yên Nghĩa (Đối diện đồng hồ)",
+    "lat": 20.94947079282161,
+    "lng": 105.74781774928843
+  },
+  {
+    "order": 32,
+    "name": "Ao làng Do Lộ",
+    "lat": 20.94547952682099,
+    "lng": 105.74273347539986
+  },
+  {
+    "order": 33,
+    "name": "Đối diện Công ty cổ phần Gỗ Thép Đại Lộc (Đồng Mai)",
+    "lat": 20.941633112711152,
+    "lng": 105.7368437701331
+  },
+  {
+    "order": 34,
+    "name": "Chợ cầu Mai Lĩnh",
+    "lat": 20.93854243558211,
+    "lng": 105.73063328455378
+  },
+  {
+    "order": 35,
+    "name": "Đối diện Công ty cổ phần cơ khí xây dựng Hà Thái (Biên Giang)",
+    "lat": 20.93496859302808,
+    "lng": 105.72369040732691
+  },
+  {
+    "order": 36,
+    "name": "Công Ty TNHH Giầy Hồng Phúc",
+    "lat": 20.933042133830387,
+    "lng": 105.72051716652966
+  },
+  {
+    "order": 37,
+    "name": "UBND xã Biên Giang",
+    "lat": 20.93052288056277,
+    "lng": 105.71682260760215
+  },
+  {
+    "order": 38,
+    "name": "Gần Trụ sở Công an huyện Chương Mỹ",
+    "lat": 20.925741638844993,
+    "lng": 105.70954896232148
+  },
+  {
+    "order": 39,
+    "name": "Đối diện UBND huyện Chương Mỹ",
+    "lat": 20.924471370527296,
+    "lng": 105.70219006589562
+  },
+  {
+    "order": 40,
+    "name": "(B) Chương Mỹ",
+    "lat": 20.923942375114212,
+    "lng": 105.6965472461808
+  }
+]
+

@@ -1,0 +1,309 @@
+[
+  {
+    "name": "Học viện Chính sách 1",
+    "order": 1,
+    "lat": 20.993676523734674,
+    "lng": 105.71079300406993
+  },
+  {
+    "name": "Đối diện Cổng số 2VinHomes Thăng Long",
+    "order": 2,
+    "lat": 20.997135717878812,
+    "lng": 105.7216424768543
+  },
+  {
+    "name": "Doanh trại Quân đội nhân dân Việt Nam ( đối diện Cổng số 3 KĐT VinHomes Thăng Long).",
+    "order": 3,
+    "lat": 20.997951026779642,
+    "lng": 105.72470044981631
+  },
+  {
+    "name": "Đối diện tòa nhà 18T1 - KĐT Sudico",
+    "order": 4,
+    "lat": 21.004281681046855,
+    "lng": 105.72775400034872
+  },
+  {
+    "name": "Đối diện KĐT GELEXIMCO A",
+    "order": 5,
+    "lat": 21.004356631451515,
+    "lng": 105.73225981129612
+  },
+  {
+    "name": "CV Thiên đường Bảo Sơn",
+    "order": 6,
+    "lat": 20.999868028179936,
+    "lng": 105.73364167349418
+  },
+  {
+    "name": "Gần Ngã Tư La Dương - Lê Trọng Tấn - Hà Đông",
+    "order": 7,
+    "lat": 20.994496499689475,
+    "lng": 105.73531057140134
+  },
+  {
+    "name": "Đối diện đường vào trường Tiểu học Dương Nội",
+    "order": 8,
+    "lat": 20.989653055636687,
+    "lng": 105.73697551219799
+  },
+  {
+    "name": "Đối diện C7-22 khu C GELEXIMCO (Đường Nội)",
+    "order": 9,
+    "lat": 20.988763502267307,
+    "lng": 105.74457859966459
+  },
+  {
+    "name": "Siêu thị Aeon Mall Hà Đông - Đường Nội",
+    "order": 10,
+    "lat": 20.99122094903114,
+    "lng": 105.75187523873454
+  },
+  {
+    "name": "Trường liên cấp VIS - Nguyễn Văn Luyện",
+    "order": 11,
+    "lat": 20.98739398582403,
+    "lng": 105.75345090591674
+  },
+  {
+    "name": "Công viên thiên văn học - Nguyễn Văn Luyện",
+    "order": 12,
+    "lat": 20.98130020361819,
+    "lng": 105.75903653417306
+  },
+  {
+    "name": "Điểm xén hè gần đường vào KĐT Dương Nội",
+    "order": 13,
+    "lat": 20.97838326105082,
+    "lng": 105.76476776125877
+  },
+  {
+    "name": "Trước ngã 4 Vạn Phúc",
+    "order": 14,
+    "lat": 20.9814604588993,
+    "lng": 105.76871995524392
+  },
+  {
+    "name": "Số 51 Vạn Phúc (Hà Đông)",
+    "order": 15,
+    "lat": 20.981757850613377,
+    "lng": 105.77082375020944
+  },
+  {
+    "name": "Số 63 Vạn Phúc (Hà Đông)",
+    "order": 16,
+    "lat": 20.978342112183864,
+    "lng": 105.77393658042203
+  },
+  {
+    "name": "Trước tòa nhà GoldSilk",
+    "order": 17,
+    "lat": 20.97688115176733,
+    "lng": 105.77581630909711
+  },
+  {
+    "name": "Nhà Văn Hóa Công Đoàn Hà Nội",
+    "order": 18,
+    "lat": 20.97385767535022,
+    "lng": 105.77818907008024
+  },
+  {
+    "name": "Sở Tư Pháp Hà Nội, Trần Phú (HĐ)",
+    "order": 19,
+    "lat": 20.97578009936147,
+    "lng": 105.7825577755619
+  },
+  {
+    "name": "Ga Văn Quán, Trần Phú (HĐ)",
+    "order": 20,
+    "lat": 20.977429557735956,
+    "lng": 105.78467309855536
+  },
+  {
+    "name": "Siêu thị Nguyễn Kim, Trần Phú (HĐ)",
+    "order": 21,
+    "lat": 20.97945848456911,
+    "lng": 105.78719247377772
+  },
+  {
+    "name": "Đại học Kiến trúc Hà Nội, Trần Phú (HĐ)",
+    "order": 22,
+    "lat": 20.981077695051578,
+    "lng": 105.78920963663086
+  },
+  {
+    "name": "Học viện An Ninh ND, Trần Phú (HĐ)",
+    "order": 23,
+    "lat": 20.982840616029783,
+    "lng": 105.79147763403874
+  },
+  {
+    "name": "Ga Phùng Khoang, Trần Phú (HĐ)",
+    "order": 24,
+    "lat": 20.984008365221644,
+    "lng": 105.79295776700337
+  },
+  {
+    "name": "521A Nguyễn Trãi",
+    "order": 25,
+    "lat": 20.98700750657431,
+    "lng": 105.79713273174204
+  },
+  {
+    "name": "Tổng Công ty Sông Đà - 493 Nguyễn Trãi",
+    "order": 26,
+    "lat": 20.98847765190392,
+    "lng": 105.79927869958262
+  },
+  {
+    "name": "Học viện Khoa học Xã hội - 471 Nguyễn Trãi",
+    "order": 27,
+    "lat": 20.990157800298043,
+    "lng": 105.80173059164227
+  },
+  {
+    "name": "Công ty Giày Thượng Đình - Nguyễn Trãi",
+    "order": 28,
+    "lat": 20.993258660057954,
+    "lng": 105.80619896488098
+  },
+  {
+    "name": "Nhà máy thuốc lá Thăng Long, Nguyễn trãi",
+    "order": 29,
+    "lat": 20.995354524679787,
+    "lng": 105.80908686420493
+  },
+  {
+    "name": "Ga Thượng Đình ( cột sau), nguyễn trãi",
+    "order": 30,
+    "lat": 20.997924389371278,
+    "lng": 105.81292629172731
+  },
+  {
+    "name": "Trường THPT Huỳnh Thúc Kháng -129T Nguyễn Trãi",
+    "order": 31,
+    "lat": 20.999496600546006,
+    "lng": 105.81532814965315
+  },
+  {
+    "name": "Sân Vận động Thượng Đình, Nguyễn Trãi",
+    "order": 32,
+    "lat": 21.000736227482914,
+    "lng": 105.81713734116785
+  },
+  {
+    "name": "Số 69A Nguyễn Trãi",
+    "order": 33,
+    "lat": 21.001766646261615,
+    "lng": 105.81875973881135
+  },
+  {
+    "name": "225 Trường Chinh",
+    "order": 34,
+    "lat": 21.001356395450102,
+    "lng": 105.82609483731036
+  },
+  {
+    "name": "173B Trường Chinh - Trước Trống Đồng - Cảnh Hồ",
+    "order": 35,
+    "lat": 21.000109365462887,
+    "lng": 105.8301232608161
+  },
+  {
+    "name": "Số 107 Trường Chinh",
+    "order": 36,
+    "lat": 20.99826012814106,
+    "lng": 105.83839958001234
+  },
+  {
+    "name": "197 Đại La - Qua Phố Vọng",
+    "order": 37,
+    "lat": 20.9969724452198,
+    "lng": 105.84347650324078
+  },
+  {
+    "name": "87 Đại La",
+    "order": 38,
+    "lat": 20.996109,
+    "lng": 105.847782
+  },
+  {
+    "name": "32 Minh Khai",
+    "order": 39,
+    "lat": 20.995665057809237,
+    "lng": 105.85064708422331
+  },
+  {
+    "name": "218-220 Minh Khai",
+    "order": 40,
+    "lat": 20.995329939288034,
+    "lng": 105.85464683082566
+  },
+  {
+    "name": "308 Minh Khai (Gần cầu Mai Động)",
+    "order": 41,
+    "lat": 20.995651881198995,
+    "lng": 105.86090167959546
+  },
+  {
+    "name": "386-388 Minh Khai",
+    "order": 42,
+    "lat": 20.996708360083957,
+    "lng": 105.8638760352526
+  },
+  {
+    "name": "Viện kinh tế và kỹ thuật dệt may",
+    "order": 43,
+    "lat": 20.99781566382829,
+    "lng": 105.86708509276731
+  },
+  {
+    "name": "27 Vĩnh Tuy",
+    "order": 44,
+    "lat": 21.0010302509239,
+    "lng": 105.87306959028665
+  },
+  {
+    "name": "Qua đường dẫn lên cầu Vĩnh Tuy, Nguyễn Khoái",
+    "order": 45,
+    "lat": 21.000933173183483,
+    "lng": 105.87065230089841
+  },
+  {
+    "name": "285 Nguyễn Khoái",
+    "order": 46,
+    "lat": 21.006221629038816,
+    "lng": 105.86846060963231
+  },
+  {
+    "name": "Đối diện Sun Plaza, Nguyễn Khoái",
+    "order": 47,
+    "lat": 21.010678060986535,
+    "lng": 105.86446359797218
+  },
+  {
+    "name": "Đối diện phòng chụp cắt lớp vi tính 64 lớp",
+    "order": 48,
+    "lat": 21.015044,
+    "lng": 105.86291
+  },
+  {
+    "name": "Đối diện Khoa A11 Viện 108",
+    "order": 49,
+    "lat": 21.017816,
+    "lng": 105.862256
+  },
+  {
+    "name": "Đối diện khu tập thể 15C Trần Khánh Dư",
+    "order": 50,
+    "lat": 21.02209615365918,
+    "lng": 105.86145464876516
+  },
+  {
+    "name": "Trung chuyển Trần Khánh Dư - Bãi đỗ xe buýt",
+    "order": 51,
+    "lat": 21.02295584224193,
+    "lng": 105.8609589605268
+  }
+]
+

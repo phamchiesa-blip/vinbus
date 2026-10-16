@@ -1,0 +1,279 @@
+[
+  {
+    "name": "(A) Trung chuyển Trần Khánh Dư - Bãi đỗ xe buýt",
+    "order": 1,
+    "lat": 21.022967427800015,
+    "lng": 105.86094538419502
+  },
+  {
+    "name": "Trạm trung chuyển Trần Khánh Dư (Đảo đón khách)",
+    "order": 2,
+    "lat": 21.022202587260132,
+    "lng": 105.86121318127014
+  },
+  {
+    "name": "Trung tâm kỹ thuật cao Viện 108",
+    "order": 3,
+    "lat": 21.018026043466463,
+    "lng": 105.861886097077
+  },
+  {
+    "name": "Bệnh viện Hữu Nghị Việt Xô",
+    "order": 4,
+    "lat": 21.015413980808038,
+    "lng": 105.86249406424915
+  },
+  {
+    "name": "Cạnh ngõ 18 Nguyễn Khoái",
+    "order": 5,
+    "lat": 21.00965834147145,
+    "lng": 105.86491070662632
+  },
+  {
+    "name": "Hè trước số nhà 202 - 204 Nguyễn Khoái",
+    "order": 6,
+    "lat": 21.006551007122678,
+    "lng": 105.86787883209904
+  },
+  {
+    "name": "82 Vĩnh Tuy",
+    "order": 7,
+    "lat": 21.001173161318544,
+    "lng": 105.8726516209524
+  },
+  {
+    "name": "505 Minh Khai",
+    "order": 8,
+    "lat": 20.99963952129931,
+    "lng": 105.87062915338014
+  },
+  {
+    "name": "Imperia Garden 2",
+    "order": 9,
+    "lat": 20.9981971687834,
+    "lng": 105.86683870160023
+  },
+  {
+    "name": "259 Minh Khai",
+    "order": 10,
+    "lat": 20.997110765510875,
+    "lng": 105.86393902849927
+  },
+  {
+    "name": "199 Minh Khai",
+    "order": 11,
+    "lat": 20.996110113136343,
+    "lng": 105.8609444341581
+  },
+  {
+    "name": "143-145 Minh Khai",
+    "order": 12,
+    "lat": 20.995552,
+    "lng": 105.855057
+  },
+  {
+    "name": "Số 5 Minh Khai ( chợ Mơ)",
+    "order": 13,
+    "lat": 20.99609719232457,
+    "lng": 105.85064453937851
+  },
+  {
+    "name": "26 Đại La",
+    "order": 14,
+    "lat": 20.996384457376607,
+    "lng": 105.84804188754802
+  },
+  {
+    "name": "Tập thể A10 128C Đại La",
+    "order": 15,
+    "lat": 20.99739957939783,
+    "lng": 105.84375314368624
+  },
+  {
+    "name": "86 Trường Chinh",
+    "order": 16,
+    "lat": 20.998644062390333,
+    "lng": 105.83866160198991
+  },
+  {
+    "name": "184 Trường Chinh",
+    "order": 17,
+    "lat": 21.000274179453008,
+    "lng": 105.83106530615056
+  },
+  {
+    "name": "Platform dành riêng cho xe buýt trước nhà 610 Trường Chinh",
+    "order": 18,
+    "lat": 21.0028113857651,
+    "lng": 105.82198845454836
+  },
+  {
+    "name": "Số 108 Nguyễn Trãi",
+    "order": 19,
+    "lat": 20.999627844309618,
+    "lng": 105.81482541870673
+  },
+  {
+    "name": "Chợ Thượng Đình, nguyễn trãi",
+    "order": 20,
+    "lat": 20.997875279414078,
+    "lng": 105.81214463364749
+  },
+  {
+    "name": "ĐH Khoa học - Tự nhiên, Nguyễn Trãi",
+    "order": 21,
+    "lat": 20.99580824018846,
+    "lng": 105.8090890159245
+  },
+  {
+    "name": "Cục Sở hữu trí tuệ, Nguyễn Trãi",
+    "order": 22,
+    "lat": 20.993460662874625,
+    "lng": 105.80569857149868
+  },
+  {
+    "name": "Bách hóa Thanh Xuân, Nguyễn Trãi",
+    "order": 23,
+    "lat": 20.990452635124146,
+    "lng": 105.8014422188942
+  },
+  {
+    "name": "216 Nguyễn Trãi - Nhà Văn hóa tổ dân phố số 8 & 9 Phường Trung Văn",
+    "order": 24,
+    "lat": 20.987754336511557,
+    "lng": 105.79764962374735
+  },
+  {
+    "name": "Công ty CP Công trình GT, Nguyễn trãi",
+    "order": 25,
+    "lat": 20.985803152620697,
+    "lng": 105.7949163786818
+  },
+  {
+    "name": "Số 10 Trần Phú - Siêu Thị Nguyễn Kim",
+    "order": 26,
+    "lat": 20.98340969792199,
+    "lng": 105.79161407051559
+  },
+  {
+    "name": "Học viện Bưu chính viễn thông, Trần Phú (HĐ)",
+    "order": 27,
+    "lat": 20.980460484649978,
+    "lng": 105.78797151623944
+  },
+  {
+    "name": "Big C Hà Đông - Hồ Gươm Plaza, Trần Phú (HĐ)",
+    "order": 28,
+    "lat": 20.97855389153479,
+    "lng": 105.78558391493088
+  },
+  {
+    "name": "ĐĐ Sở Tư pháp Hà Nội - Trần Phú (HĐ)",
+    "order": 29,
+    "lat": 20.975490382436394,
+    "lng": 105.78154254091582
+  },
+  {
+    "name": "Số 2 Chu Văn An - Hà Đông",
+    "order": 30,
+    "lat": 20.974045496521462,
+    "lng": 105.77829348882082
+  },
+  {
+    "name": "Cầu Cong - Vạn Phúc",
+    "order": 31,
+    "lat": 20.977383567621228,
+    "lng": 105.77560320600342
+  },
+  {
+    "name": "Chùa Vạn Phúc - Hà Đông",
+    "order": 32,
+    "lat": 20.979680731350776,
+    "lng": 105.77251221796386
+  },
+  {
+    "name": "Số 170 - 172 Vạn Phúc",
+    "order": 33,
+    "lat": 20.98202363935302,
+    "lng": 105.77082346996447
+  },
+  {
+    "name": "Điểm xén hè qua ngã 4 Vạn Phúc",
+    "order": 34,
+    "lat": 20.980827068970488,
+    "lng": 105.76744147800702
+  },
+  {
+    "name": "ĐĐ Công viên thiên văn học - Nguyễn Văn Luyện",
+    "order": 35,
+    "lat": 20.98161822831872,
+    "lng": 105.7589814809287
+  },
+  {
+    "name": "ĐĐ Trường liên cấp VIS - Nguyễn Văn Luyện",
+    "order": 36,
+    "lat": 20.987398001839463,
+    "lng": 105.75368588033176
+  },
+  {
+    "name": "ĐĐ Siêu thị Aeon Mall Hà Đông - Đường Nội",
+    "order": 37,
+    "lat": 20.99127565896761,
+    "lng": 105.7513535209888
+  },
+  {
+    "name": "Gần C7-22 khu C GELEXIMCO (Đường Nội)",
+    "order": 38,
+    "lat": 20.988976750883467,
+    "lng": 105.74466935558624
+  },
+  {
+    "name": "Gần đường vào trường Tiểu học Dương Nội",
+    "order": 39,
+    "lat": 20.989677825122065,
+    "lng": 105.73723094996912
+  },
+  {
+    "name": "Qua ngã tư La Dương - Lê Trọng Tấn - Hà Đông",
+    "order": 40,
+    "lat": 20.994972592613273,
+    "lng": 105.73538878854623
+  },
+  {
+    "name": "Đối diện CV Thiên đường Bảo Sơn",
+    "order": 41,
+    "lat": 20.999946347740938,
+    "lng": 105.73384360712765
+  },
+  {
+    "name": "KĐT GELEXIMCO A",
+    "order": 42,
+    "lat": 21.004360265356176,
+    "lng": 105.73248033124388
+  },
+  {
+    "name": "Tòa nhà 18T1 - KĐT Sudico",
+    "order": 43,
+    "lat": 21.004463198637566,
+    "lng": 105.72758885127699
+  },
+  {
+    "name": "Doanh trại quân đội nhân dân 1 (Cổng 3 Vinhomes)",
+    "order": 44,
+    "lat": 20.998488433760695,
+    "lng": 105.72459588399212
+  },
+  {
+    "name": "Cổng số 2 VinHomes Thăng Long",
+    "order": 45,
+    "lat": 20.997246890315424,
+    "lng": 105.72133262686403
+  },
+  {
+    "name": "Học viện Chính sách",
+    "order": 46,
+    "lat": 20.99366902809325,
+    "lng": 105.71080980990975
+  }
+]
+
