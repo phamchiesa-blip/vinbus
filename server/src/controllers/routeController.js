@@ -127,21 +127,191 @@ export const getRouteById = async (req, res, next) => {
 // cập nhật giá trị cho xe bus
 export const updateRoute = async (req, res, next) => {
   try {
-    const route = await BusRoute.findByIdAndUpdate(
-      req.params.id, // tìm theo id 
-      req.body, // update cái mà user request
-      {
-        new: true, // Nếu không có cái này, Mongoose có thể trả về document cũ trước khi update.
-        runValidators: true,
-      }
-    );
+    const existingRoute = await BusRoute.findById(req.params.id).lean();
 
-    if (!route) {
+    if (!existingRoute) {
       return res.status(404).json({
         success: false,
         message: "Đéo tìm được tuyến này !!!",
       });
     }
+
+    // Bảo vệ dữ liệu outbound (geometry và tọa độ điểm dừng)
+    if (req.body.outbound) {
+      const hasIncomingGeometry =
+        req.body.outbound.geometry &&
+        Array.isArray(req.body.outbound.geometry.coordinates) &&
+        req.body.outbound.geometry.coordinates.length > 0;
+
+      if (!hasIncomingGeometry && existingRoute.outbound?.geometry) {
+        req.body.outbound.geometry = {
+          type: existingRoute.outbound.geometry.type || "LineString",
+          coordinates: existingRoute.outbound.geometry.coordinates || [],
+        };
+      } else if (hasIncomingGeometry && !req.body.outbound.geometry.type) {
+        req.body.outbound.geometry.type = "LineString";
+      }
+
+      // Helper kiểm tra tọa độ hợp lệ
+      const isValidCoordinate = (val) =>
+        val !== undefined &&
+        val !== null &&
+        typeof val !== "boolean" &&
+        String(val).trim() !== "" &&
+        !isNaN(Number(val)) &&
+        isFinite(Number(val));
+
+      // Bảo toàn tọa độ các điểm dừng hiện có nếu payload không truyền tọa độ mới
+      if (
+        Array.isArray(req.body.outbound.stops) &&
+        Array.isArray(existingRoute.outbound?.stops)
+      ) {
+        const existingStopsById = new Map();
+
+        existingRoute.outbound.stops.forEach((s) => {
+          if (s._id) existingStopsById.set(s._id.toString(), s);
+        });
+
+        // Validate tọa độ đầu vào chiều đi
+        for (const stop of req.body.outbound.stops) {
+          const hasLat = isValidCoordinate(stop.lat);
+          const hasLng = isValidCoordinate(stop.lng);
+
+          if ((hasLat && !hasLng) || (!hasLat && hasLng)) {
+            return res.status(400).json({
+              success: false,
+              message: `Điểm dừng "${stop.name || stop.order}" ở chiều đi phải có đủ cả Vĩ độ và Kinh độ hoặc để trống cả hai.`,
+            });
+          }
+
+          if (hasLat && hasLng) {
+            const numLat = Number(stop.lat);
+            const numLng = Number(stop.lng);
+            if (numLat < -90 || numLat > 90 || numLng < -180 || numLng > 180) {
+              return res.status(400).json({
+                success: false,
+                message: `Tọa độ của điểm dừng "${stop.name || stop.order}" ở chiều đi không hợp lệ (-90 <= Lat <= 90, -180 <= Lng <= 180).`,
+              });
+            }
+          }
+        }
+
+        req.body.outbound.stops = req.body.outbound.stops.map((stop) => {
+          const existing =
+            stop._id ? existingStopsById.get(stop._id.toString()) : null;
+
+          const hasLat = isValidCoordinate(stop.lat);
+          const hasLng = isValidCoordinate(stop.lng);
+
+          if (existing) {
+            return {
+              ...stop,
+              lat: hasLat ? Number(stop.lat) : (existing.lat ?? null),
+              lng: hasLng ? Number(stop.lng) : (existing.lng ?? null),
+            };
+          }
+
+          return {
+            ...stop,
+            lat: hasLat ? Number(stop.lat) : null,
+            lng: hasLng ? Number(stop.lng) : null,
+          };
+        });
+      }
+    }
+
+    // Bảo vệ dữ liệu inbound (geometry và tọa độ điểm dừng)
+    if (req.body.inbound) {
+      const hasIncomingGeometry =
+        req.body.inbound.geometry &&
+        Array.isArray(req.body.inbound.geometry.coordinates) &&
+        req.body.inbound.geometry.coordinates.length > 0;
+
+      if (!hasIncomingGeometry && existingRoute.inbound?.geometry) {
+        req.body.inbound.geometry = {
+          type: existingRoute.inbound.geometry.type || "LineString",
+          coordinates: existingRoute.inbound.geometry.coordinates || [],
+        };
+      } else if (hasIncomingGeometry && !req.body.inbound.geometry.type) {
+        req.body.inbound.geometry.type = "LineString";
+      }
+
+      // Helper kiểm tra tọa độ hợp lệ
+      const isValidCoordinate = (val) =>
+        val !== undefined &&
+        val !== null &&
+        typeof val !== "boolean" &&
+        String(val).trim() !== "" &&
+        !isNaN(Number(val)) &&
+        isFinite(Number(val));
+
+      // Bảo toàn tọa độ các điểm dừng hiện có nếu payload không truyền tọa độ mới
+      if (
+        Array.isArray(req.body.inbound.stops) &&
+        Array.isArray(existingRoute.inbound?.stops)
+      ) {
+        const existingStopsById = new Map();
+
+        existingRoute.inbound.stops.forEach((s) => {
+          if (s._id) existingStopsById.set(s._id.toString(), s);
+        });
+
+        // Validate tọa độ đầu vào chiều về
+        for (const stop of req.body.inbound.stops) {
+          const hasLat = isValidCoordinate(stop.lat);
+          const hasLng = isValidCoordinate(stop.lng);
+
+          if ((hasLat && !hasLng) || (!hasLat && hasLng)) {
+            return res.status(400).json({
+              success: false,
+              message: `Điểm dừng "${stop.name || stop.order}" ở chiều về phải có đủ cả Vĩ độ và Kinh độ hoặc để trống cả hai.`,
+            });
+          }
+
+          if (hasLat && hasLng) {
+            const numLat = Number(stop.lat);
+            const numLng = Number(stop.lng);
+            if (numLat < -90 || numLat > 90 || numLng < -180 || numLng > 180) {
+              return res.status(400).json({
+                success: false,
+                message: `Tọa độ của điểm dừng "${stop.name || stop.order}" ở chiều về không hợp lệ (-90 <= Lat <= 90, -180 <= Lng <= 180).`,
+              });
+            }
+          }
+        }
+
+        req.body.inbound.stops = req.body.inbound.stops.map((stop) => {
+          const existing =
+            stop._id ? existingStopsById.get(stop._id.toString()) : null;
+
+          const hasLat = isValidCoordinate(stop.lat);
+          const hasLng = isValidCoordinate(stop.lng);
+
+          if (existing) {
+            return {
+              ...stop,
+              lat: hasLat ? Number(stop.lat) : (existing.lat ?? null),
+              lng: hasLng ? Number(stop.lng) : (existing.lng ?? null),
+            };
+          }
+
+          return {
+            ...stop,
+            lat: hasLat ? Number(stop.lat) : null,
+            lng: hasLng ? Number(stop.lng) : null,
+          };
+        });
+      }
+    }
+
+    const route = await BusRoute.findByIdAndUpdate(
+      req.params.id, // tìm theo id 
+      req.body, // update cái mà user request
+      {
+        returnDocument: "after",
+        runValidators: true,
+      }
+    );
 
     res.status(200).json({
       success: true,

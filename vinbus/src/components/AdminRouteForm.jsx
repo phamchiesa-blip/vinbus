@@ -76,12 +76,14 @@ const AdminRouteForm = ({
           start: route.outbound?.start || "",
           end: route.outbound?.end || "",
           stops: route.outbound?.stops || [],
+          ...(route.outbound?.geometry ? { geometry: route.outbound.geometry } : {}),
         },
 
         inbound: {
           start: route.inbound?.start || "",
           end: route.inbound?.end || "",
           stops: route.inbound?.stops || [],
+          ...(route.inbound?.geometry ? { geometry: route.inbound.geometry } : {}),
         },
 
         operatingHours: {
@@ -136,20 +138,49 @@ const AdminRouteForm = ({
   // STOPS
   // =========================
 
-  const addStop = (direction) => {
-    setFormData((prev) => ({
-      ...prev,
-      [direction]: {
-        ...prev[direction],
-        stops: [
-          ...prev[direction].stops,
-          {
-            name: "",
-            order: prev[direction].stops.length + 1,
-          },
-        ],
-      },
-    }));
+  const addStop = (direction, afterIndex = null) => {
+    setFormData((prev) => {
+      const currentStops = prev[direction]?.stops || [];
+      const newStop = {
+        name: "",
+        lat: null,
+        lng: null,
+      };
+
+      let newStopsList;
+      if (
+        afterIndex === null ||
+        afterIndex === undefined ||
+        afterIndex >= currentStops.length - 1
+      ) {
+        // Thêm vào cuối danh sách
+        newStopsList = [...currentStops, newStop];
+      } else if (afterIndex < 0) {
+        // Thêm vào đầu danh sách
+        newStopsList = [newStop, ...currentStops];
+      } else {
+        // Thêm ngay sau vị trí afterIndex
+        newStopsList = [
+          ...currentStops.slice(0, afterIndex + 1),
+          newStop,
+          ...currentStops.slice(afterIndex + 1),
+        ];
+      }
+
+      // Đánh số lại order từ 1 theo thứ tự mảng mới
+      const updatedStops = newStopsList.map((stop, i) => ({
+        ...stop,
+        order: i + 1,
+      }));
+
+      return {
+        ...prev,
+        [direction]: {
+          ...prev[direction],
+          stops: updatedStops,
+        },
+      };
+    });
   };
 
   const updateStop = (
@@ -301,13 +332,89 @@ const AdminRouteForm = ({
       return;
     }
 
+    // Helper kiểm tra tọa độ có được nhập hay không
+    const isCoordinateFilled = (val) =>
+      val !== null &&
+      val !== undefined &&
+      typeof val !== "boolean" &&
+      String(val).trim() !== "";
+
+    // Validate tọa độ các điểm dừng
+    for (const direction of ["outbound", "inbound"]) {
+      const directionLabel =
+        direction === "outbound" ? "chiều đi" : "chiều về";
+      const stops = formData[direction]?.stops || [];
+
+      for (let i = 0; i < stops.length; i++) {
+        const stop = stops[i];
+        const hasLat = isCoordinateFilled(stop.lat);
+        const hasLng = isCoordinateFilled(stop.lng);
+        const stopName = stop.name?.trim() || `Điểm dừng #${stop.order || i + 1}`;
+
+        // Chỉ nhập 1 trong 2 tọa độ
+        if (hasLat && !hasLng) {
+          setError(
+            `${stopName} ở ${directionLabel}: Bạn đã nhập Vĩ độ (Lat) nhưng chưa nhập Kinh độ (Lng). Vui lòng nhập đủ cả hai hoặc để trống cả hai.`
+          );
+          return;
+        }
+
+        if (!hasLat && hasLng) {
+          setError(
+            `${stopName} ở ${directionLabel}: Bạn đã nhập Kinh độ (Lng) nhưng chưa nhập Vĩ độ (Lat). Vui lòng nhập đủ cả hai hoặc để trống cả hai.`
+          );
+          return;
+        }
+
+        // Nếu nhập cả 2 tọa độ, kiểm tra tính hợp lệ
+        if (hasLat && hasLng) {
+          const numLat = Number(stop.lat);
+          const numLng = Number(stop.lng);
+
+          if (isNaN(numLat) || numLat < -90 || numLat > 90) {
+            setError(
+              `${stopName} ở ${directionLabel}: Vĩ độ (Lat) "${stop.lat}" không hợp lệ. Vĩ độ phải là số từ -90 đến 90.`
+            );
+            return;
+          }
+
+          if (isNaN(numLng) || numLng < -180 || numLng > 180) {
+            setError(
+              `${stopName} ở ${directionLabel}: Kinh độ (Lng) "${stop.lng}" không hợp lệ. Kinh độ phải là số từ -180 đến 180.`
+            );
+            return;
+          }
+        }
+      }
+    }
+
     try {
       setLoading(true);
+
+      // Chuyển đổi các điểm dừng sang định dạng gửi API (lat/lng là Number hoặc null, không chuyển thành 0)
+      const formatStopsForSubmit = (stops) =>
+        (stops || []).map((stop) => {
+          const hasLat = isCoordinateFilled(stop.lat);
+          const hasLng = isCoordinateFilled(stop.lng);
+
+          return {
+            ...stop,
+            lat: hasLat ? Number(stop.lat) : null,
+            lng: hasLng ? Number(stop.lng) : null,
+          };
+        });
 
       // Convert các field number
       const data = {
         ...formData,
-
+        outbound: {
+          ...formData.outbound,
+          stops: formatStopsForSubmit(formData.outbound?.stops),
+        },
+        inbound: {
+          ...formData.inbound,
+          stops: formatStopsForSubmit(formData.inbound?.stops),
+        },
         distance: Number(formData.distance) || 0,
         frequency: Number(formData.frequency) || 0,
         tripsPerDay:
@@ -385,39 +492,92 @@ const AdminRouteForm = ({
 
           {stops.map((stop, index) => (
             <div
-              key={index}
-              className="flex items-center gap-2"
+              key={stop._id || `${direction}-${index}`}
+              className="flex flex-col gap-2 rounded-xl border border-slate-200/80 bg-white p-3 md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0"
             >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-600">
-                {index + 1}
-              </span>
+              <div className="flex items-center gap-2 md:flex-1">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-600">
+                  {index + 1}
+                </span>
 
-              <input
-                type="text"
-                value={stop.name}
-                onChange={(e) =>
-                  updateStop(
-                    direction,
-                    index,
-                    "name",
-                    e.target.value
-                  )
-                }
-                placeholder="Tên điểm dừng"
-                disabled={loading}
-                className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-500/10"
-              />
+                <input
+                  type="text"
+                  value={stop.name}
+                  onChange={(e) =>
+                    updateStop(
+                      direction,
+                      index,
+                      "name",
+                      e.target.value
+                    )
+                  }
+                  placeholder="Tên điểm dừng"
+                  disabled={loading}
+                  className="w-full flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-500/10"
+                />
+              </div>
 
-              <button
-                type="button"
-                onClick={() =>
-                  removeStop(direction, index)
-                }
-                disabled={loading}
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-red-400 transition hover:bg-red-50 hover:text-red-500"
-              >
-                <Trash2 className="h-4 w-4" />
-              </button>
+              <div className="flex flex-wrap items-center gap-2 md:flex-nowrap">
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  value={stop.lat ?? ""}
+                  onChange={(e) =>
+                    updateStop(
+                      direction,
+                      index,
+                      "lat",
+                      e.target.value
+                    )
+                  }
+                  placeholder="Vĩ độ (Lat)"
+                  title="Vĩ độ (Latitude, từ -90 đến 90)"
+                  disabled={loading}
+                  className="w-32 flex-1 rounded-xl border border-slate-200 bg-white px-2.5 py-2 text-xs font-mono outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-500/10 md:w-36 md:flex-none"
+                />
+
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  value={stop.lng ?? ""}
+                  onChange={(e) =>
+                    updateStop(
+                      direction,
+                      index,
+                      "lng",
+                      e.target.value
+                    )
+                  }
+                  placeholder="Kinh độ (Lng)"
+                  title="Kinh độ (Longitude, từ -180 đến 180)"
+                  disabled={loading}
+                  className="w-32 flex-1 rounded-xl border border-slate-200 bg-white px-2.5 py-2 text-xs font-mono outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-500/10 md:w-36 md:flex-none"
+                />
+
+                <button
+                  type="button"
+                  onClick={() => addStop(direction, index)}
+                  disabled={loading}
+                  title="Thêm điểm dừng bên dưới"
+                  className="flex h-9 shrink-0 items-center gap-1.5 rounded-xl border border-emerald-200 bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 hover:border-emerald-300"
+                >
+                  <Plus className="h-3.5 w-3.5" />
+                  <span className="hidden xl:inline">Thêm điểm dừng bên dưới</span>
+                  <span className="xl:hidden">Thêm dưới</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    removeStop(direction, index)
+                  }
+                  disabled={loading}
+                  title="Xóa điểm dừng"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-red-400 transition hover:bg-red-50 hover:text-red-500"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </button>
+              </div>
             </div>
           ))}
 
